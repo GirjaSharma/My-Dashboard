@@ -1,11 +1,13 @@
-export default function LandingPage(signup, login){
+import {LoginButton} from '../../Components/AuthButtons/LoginButton';
+import {SignupButton} from '../../Components/AuthButtons/SignupButton'
+export default function LandingPage(){
     return(
         <>
-        <h1>Party Pilot</h1>
+        <h1>Country Side Rentals</h1>
         <p>Come celebrate with us.</p>
-        <button onClick={signup}>Signup</button>
+        <SignupButton/>
 
-      <button onClick={login}>Login</button>
+      <LoginButton/>
         </>
     )
 }

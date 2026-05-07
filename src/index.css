@@ -23,10 +23,12 @@
 
   --success-500: #6FA878;
   --warning-500: #C99A4A;
-  --danger-500: #B86A5E;
+  /* --danger-500: #B86A5E; */
+   --danger-500: #D58A7C;
 
   --text-100: #FAF7EF;
   --text-300: #D8CCB6;
+  --text-dark: #171512;
   --text-muted: #AFA28B;
 }
 
@@ -53,6 +55,8 @@ body{
   linear-gradient(135deg, var(--bg-950) 0%, var(--bg-900) 45%, var(--surface-800) 100%);
   background-repeat: no-repeat;
   background-size: cover;
-    color: var(--text-300);
+    color: var(--text-100);
+    
+    padding: 3rem;
   
 }
