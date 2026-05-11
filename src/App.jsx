@@ -1,7 +1,15 @@
-
-import { useAuth0 } from "@auth0/auth0-react";
+// import { Routes, Route, Navigate } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import Dashboard from './Pages/Dashboard/Dashboard';
+
+// function protectedRoute({children}){
+//   const {isAuthenticated, isLoading}= useAuth0();
+
+//   if(isLoading) return <div className="loading-text">Loading...</div>;
+
+//   return isAuthenticated ?  children : <Navigate to="/" />;
+// }
 
 function App() {
   const {
@@ -14,7 +22,7 @@ function App() {
   if (isLoading){
 return (
   <div className="app-container">
-         <div className="loading-text">Loading...</div>
+        <div className="loading-text">Loading...</div>
   </div>
 )
   }
@@ -30,18 +38,13 @@ return (
   }
 
   return isAuthenticated ? (
-    <div className="app-container">
       
       <Dashboard
       user={user}
         />
-    </div>
   ) : (
-    <div className="app-container">
     <LandingPage 
      />
-      
-    </div>
   );
 }
 
