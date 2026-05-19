@@ -3,9 +3,9 @@ import {Menu, Search, Plus, ChevronDown, Bell} from 'lucide-react';
 // import {LogoutButton} from '../AuthButtons/LogoutButton' ;
 function Header(){
     return(
-        <div className="flex items-center justify-between bg-surface pb-2">
+        <header className="flex items-center justify-between bg-surface pb-2 border-b border-border-subtle">
             {/* left section */}
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
                 
                 <button className="p-4 rounded-lg text-text-main">
                     <Menu className="w-5 h-5" />
@@ -24,13 +24,13 @@ function Header(){
                     <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2"/>
                     <input type="text"
                      placeholder="Search Anything"
-                      className="h-11 w-80 border border-border-subtle bg-card rounded-xl px-4 pl-10 pr-4 py-2.5 text-text-main placeholder:text-text-soft hover:border-input-hover hover:bg-input-hover-bg focus-visible:outline-2 focus-visible:outline-focus-ring" />
+                      className="h-9 w-72 border border-border-subtle bg-card rounded-md px-4 pl-10 pr-4 py-2.5 text-sm text-text-main placeholder:text-text-soft hover:border-input-hover hover:bg-input-hover-bg focus-visible:outline-2 focus-visible:outline-focus-ring" />
                 {/* </div> */}
             </div>
 
             {/* Right */}
             <div className="flex items-center space-x-3">
-                <button className="hidden lg:flex items-center font-semibold space-x-2 py-2 px-4 bg-primary text-primary-text hover:bg-primary-hover rounded-xl focus-visible:outline-2 focus-visible:outline-focus-ring">
+                <button className="hidden lg:flex items-center font-semibold space-x-2 py-2 px-4 bg-primary text-primary-text hover:bg-primary-hover rounded-md focus-visible:outline-2 focus-visible:outline-focus-ring">
                     <Plus className="w-4 h-4" />
                     <span className="text-sm">New Booking</span>
                 </button>
@@ -58,7 +58,7 @@ function Header(){
 
             {/* <LogoutButton/> */}
          
-        </div>
+        </header>
     )
 }
 
