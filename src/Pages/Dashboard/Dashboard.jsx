@@ -1,25 +1,30 @@
 
+import {useState} from 'react';
 import Sidebar from '../../Components/Layout/Sidebar';
 import Header from '../../Components/Layout/Header'; 
+import {Overview} from './Overview';
 
 
 export default function Dashboard( user){
     console.log("user", user)
+    const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
+    // const [currentPage, setCurrentPage] =useState('overview')
+
     return (
         <div className="min-h-screen bg-bg text-text-main ml-2 mr-4">
             <div className="flex h-screen overflow-hidden">
-                
-            {/* <h1>Welcome to the Dashboard of Party Point</h1> */}
-            {/* <p>Logged in as {user.user.email}</p> */}
-            {/* <pre>{JSON.stringify(user, null, 2)}</pre> */}
-            <Sidebar/>
+            <Sidebar sidebarCollapsed={sidebarCollapsed} onToggle={()=> setSidebarCollapsed(!sidebarCollapsed)} 
+                />
             <div className="flex-1 flex flex-col overflow-hidden">
-                <Header user={user}/>
+                <Header user={user} sidebarCollapsed={sidebarCollapsed} onToggle={()=> setSidebarCollapsed(!sidebarCollapsed)} />
+                <main className="flex-1 overflow-y-auto bg-bg">
+                    <div class="p6 space-y-6">
+                        <Overview/>
+                    </div>
+                </main>
             </div>
              
             </div>
-            
-            {/* <div className=""></div> */}
            
         </div>
     )
