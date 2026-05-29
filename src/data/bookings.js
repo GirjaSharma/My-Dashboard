@@ -21,8 +21,8 @@ export const bookings = [
         fulfillmentType: "customer_pickup",
         customerPickupDate: "2026-05-02",
         customerReturnDate: "2026-05-03",
-        pickupTime: "10:00 AM",
-        dropOffTime: "12:00 PM"
+        customerPickupTime: "10:00 AM",
+        customerReturnTime: "12:00 PM"
 
     },
     {
@@ -57,8 +57,8 @@ export const bookings = [
         fulfillmentType: "customer_pickup",
         customerPickupDate: "2026-05-16",
         customerReturnDate: "2026-05-17",
-         pickupTime: "3:00 PM",
-        dropOffTime: "10:30 AM"
+         customerPickupTime: "3:00 PM",
+        customerReturnTime: "10:30 AM"
 
     },
     {
@@ -88,8 +88,8 @@ export const bookings = [
         fulfillmentType: "customer_pickup",
         customerPickupDate: "2026-05-16",
         customerReturnDate: "2026-05-17",
-         pickupTime: "10:30 AM",
-        dropOffTime: "10:30 AM"
+         customerPickupTime: "10:30 AM",
+        customerReturnTime: "10:30 AM"
 
     },
     {
@@ -202,8 +202,8 @@ export const bookings = [
         fulfillmentType: "business_pickup",
         businessDeliveryDate: "2026-06-05",
         businessPickupDate: "2026-06-06",
-        customerPickupTime: "7:00 PM",
-        customerReturnTime: "7:00 PM"
+        businessDeliveryTime: "7:00 PM",
+        businessPickupTime: "7:00 PM"
 
     },
     {
@@ -213,12 +213,12 @@ export const bookings = [
         items: [
             {
                 name: "Chairs",
-                quantity : 25,
+                quantity : 30,
                 unitPrice: 2,
             },
              {
                 name: "Tables",
-                quantity : 4,
+                quantity : 5,
                 unitPrice: 10,
             },
 
@@ -231,8 +231,8 @@ export const bookings = [
         },
         depositPaid: 40,
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-05-27",
-        customerReturnDate: "2026-05-28",
+        customerPickupDate: "2026-06-06",
+        customerReturnDate: "2026-06-07",
         customerPickupTime: "7:30 PM",
         customerReturnTime: "7:30 PM"
 
@@ -259,8 +259,34 @@ export const bookings = [
         fulfillmentType: "business_pickup",
         businessDeliveryDate: "2026-05-30",
         businessPickupDate: "2026-05-31",
-        customerPickupTime: "9:30 AM",
-        customerReturnTime: "9:30 AM"
+        businessDeliveryTime: "9:30 AM",
+        businessPickupTime: "9:30 AM"
+
+    },
+     {
+        id: "booking-010",
+        name: "Areej",
+        eventDate: "2026-06-07",
+        items: [
+            {
+                name: "Chairs",
+                quantity : 15,
+                unitPrice: 2,
+            },
+
+        ],
+        charges:{
+            deliveryFee: 0,
+            setupFee:0,
+            discount:0,
+            tax: 0
+        },
+        depositPaid: 10,
+        fulfillmentType: "customer_pickup",
+        customerPickupDate: "2026-06-07",
+        customerReturnDate: "2026-06-08",
+        customerPickupTime: "11:00 AM",
+        customerReturnTime: "11:00 AM"
 
     },
 

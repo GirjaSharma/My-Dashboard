@@ -1,5 +1,10 @@
+import {StatusGrid} from './StatusGrid';
+
 export const Overview =()=>{
     return(
-        <div>Overview</div>
+        <div className="space-y-6">
+
+            <StatusGrid/>
+        </div>
     )
 }
