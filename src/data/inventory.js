@@ -9,10 +9,11 @@ export const inventoryItems=[
         replacementCost: 65,
         condition: "new",
         status: "available",
+        reorderPoint: 2,
     },
     {
-        id: "item-chair",
-        name: "Chairs",
+        id: "item-resinChair",
+        name: "Resin Chairs",
         category: "Furniture",
         totalQuantity: 64,
         availableQuantity: 64,
@@ -20,10 +21,11 @@ export const inventoryItems=[
         replacementCost: 36,
         condition: "new",
         status: "available",
+        reorderPoint: 10
     },
     {
-        id: "item-tableCloth",
-        name: "Table Cloth",
+        id: "item-fittedTableCloth",
+        name: "Table Cloth (Fitted)",
         category: "Furniture",
         totalQuantity: 12,
         availableQuantity: 12,
@@ -31,6 +33,7 @@ export const inventoryItems=[
         replacementCost: 28,
         condition: "new",
         status: "available",
+        reorderPoint: 2
     },
     {
         id: "item-kidsChair",
@@ -42,6 +45,7 @@ export const inventoryItems=[
         replacementCost: 25.5,
         condition: "new",
         status: "available",
+        reorderPoint: 6
     },
     {
         id: "item-kidsTables",
@@ -53,5 +57,42 @@ export const inventoryItems=[
         replacementCost: 58,
         condition: "new",
         status: "available",
+        reorderPoint: 1
+    },
+     {
+        id: "item-regularTableCloth",
+        name: "Table Cloth",
+        category: "Furniture",
+        totalQuantity: 12,
+        availableQuantity: 12,
+        unitRentalPrice: 5,
+        replacementCost: 8,
+        condition: "new",
+        status: "available",
+        reorderPoint: 2
+    },
+     {
+        id: "item-metalChair",
+        name: "Folding Chairs",
+        category: "Furniture",
+        totalQuantity: 50,
+        availableQuantity: 50,
+        unitRentalPrice: 1.50,
+        replacementCost: 18,
+        condition: "new",
+        status: "available",
+        reorderPoint:6
+    },
+     {
+        id: "item-tableRunners",
+        name: "Runners",
+        category: "Furniture",
+        totalQuantity: 50,
+        availableQuantity: 50,
+        unitRentalPrice: 3,
+        replacementCost: 2,
+        condition: "new",
+        status: "available",
+        reorderPoint: 5
     },
 ]
