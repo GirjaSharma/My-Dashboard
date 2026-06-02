@@ -18,10 +18,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-05-02",
-        customerReturnDate: "2026-05-03",
-        customerPickupTime: "10:00 AM",
-        customerReturnTime: "12:00 PM",
+        itemsOutDate: "2026-05-02",
+        itemsBackDate: "2026-05-03",
+        itemsOutAt: "10:00 AM",
+        itemsBackAt: "12:00 PM",
         bookingStatus: "confirmed"
 
     },
@@ -54,10 +54,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-05-16",
-        customerReturnDate: "2026-05-17",
-         customerPickupTime: "3:00 PM",
-        customerReturnTime: "10:30 AM",
+        itemsOutDate: "2026-05-16",
+        itemsBackDate: "2026-05-17",
+         itemsOutAt: "3:00 PM",
+        itemsBackAt: "10:30 AM",
          bookingStatus: "confirmed"
 
     },
@@ -85,10 +85,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-05-16",
-        customerReturnDate: "2026-05-17",
-         customerPickupTime: "10:30 AM",
-        customerReturnTime: "10:30 AM",
+        itemsOutDate: "2026-05-16",
+        itemsBackDate: "2026-05-17",
+         itemsOutAt: "10:30 AM",
+        itemsBackAt: "10:30 AM",
          bookingStatus: "confirmed"
 
     },
@@ -111,10 +111,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-05-23",
-        customerReturnDate: "2026-05-24",
-         customerPickupTime: "6:00 PM",
-        customerReturnTime: "7:00 PM",
+        itemsOutDate: "2026-05-23",
+        itemsBackDate: "2026-05-24",
+         itemsOutAt: "6:00 PM",
+        itemsBackAt: "7:00 PM",
          bookingStatus: "confirmed"
 
     },
@@ -137,10 +137,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-05-24",
-        customerReturnDate: "2026-05-24",
-        customerPickupTime: "9:00 AM",
-        customerReturnTime: "8:00 PM",
+        itemsOutDate: "2026-05-24",
+        itemsBackDate: "2026-05-24",
+        itemsOutAt: "9:00 AM",
+        itemsBackAt: "8:00 PM",
          bookingStatus: "confirmed"
 
     },
@@ -163,10 +163,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-05-27",
-        customerReturnDate: "2026-05-28",
-        customerPickupTime: "10:00 AM",
-        customerReturnTime: "10:00 AM",
+        itemsOutDate: "2026-05-27",
+        itemsBackDate: "2026-05-28",
+        itemsOutAt: "10:00 AM",
+        itemsBackAt: "10:00 AM",
          bookingStatus: "confirmed"
 
     },
@@ -199,10 +199,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "business_pickup",
-        businessDeliveryDate: "2026-06-05",
-        businessPickupDate: "2026-06-06",
-        businessDeliveryTime: "7:00 PM",
-        businessPickupTime: "7:00 PM",
+        itemsOutDate: "2026-06-05",
+        itemsBackDate: "2026-06-06",
+        itemsOutAt: "7:00 PM",
+        itemsBackAt: "7:00 PM",
          bookingStatus: "confirmed"
 
     },
@@ -230,10 +230,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-06-06",
-        customerReturnDate: "2026-06-07",
-        customerPickupTime: "7:30 PM",
-        customerReturnTime: "7:30 PM",
+        itemsOutDate: "2026-06-06",
+        itemsBackDate: "2026-06-07",
+        itemsOutAt: "7:30 PM",
+        itemsBackAt: "7:30 PM",
          bookingStatus: "confirmed"
 
     },
@@ -256,10 +256,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "business_pickup",
-        businessDeliveryDate: "2026-05-30",
-        businessPickupDate: "2026-05-31",
-        businessDeliveryTime: "9:30 AM",
-        businessPickupTime: "9:30 AM",
+        itemsOutDate: "2026-05-30",
+        itemsBackDate: "2026-05-31",
+        itemsOutAt: "9:30 AM",
+        itemsBackAt: "9:30 AM",
          bookingStatus: "confirmed"
 
     },
@@ -282,10 +282,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-06-01",
-        customerReturnDate: "2026-06-02",
-        customerPickupTime: "11:00 AM",
-        customerReturnTime: "11:00 AM",
+        itemsOutDate: "2026-06-01",
+        itemsBackDate: "2026-06-02",
+        itemsOutAt: "11:00 AM",
+        itemsBackAt: "11:00 AM",
          bookingStatus: "confirmed"
 
     },
@@ -308,10 +308,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-06-07",
-        customerReturnDate: "2026-06-08",
-        customerPickupTime: "11:00 AM",
-        customerReturnTime: "11:00 AM",
+        itemsOutDate: "2026-06-07",
+        itemsBackDate: "2026-06-08",
+        itemsOutAt: "11:00 AM",
+        itemsBackAt: "11:00 AM",
          bookingStatus: "confirmed"
 
     },
@@ -349,10 +349,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-06-06",
-        customerReturnDate: "2026-06-07",
-        customerPickupTime: "1:00 PM",
-        customerReturnTime: "1:00 PM",
+        itemsOutDate: "2026-06-06",
+        itemsBackDate: "2026-06-07",
+        itemsOutAt: "1:00 PM",
+        itemsBackAt: "1:00 PM",
          bookingStatus: "confirmed"
 
     },
@@ -375,10 +375,10 @@ export const bookings = [
             tax: 0
         },
         fulfillmentType: "customer_pickup",
-        customerPickupDate: "2026-06-12",
-        customerReturnDate: "2026-06-13",
-        customerPickupTime: "11:00 AM",
-        customerReturnTime: "11:00 AM",
+        itemsOutDate: "2026-06-12",
+        itemsBackDate: "2026-06-13",
+        itemsOutAt: "11:00 AM",
+        itemsBackAt: "11:00 AM",
          bookingStatus: "confirmed"
 
     },
