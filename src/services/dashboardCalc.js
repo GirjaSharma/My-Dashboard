@@ -57,7 +57,8 @@ export const upcomingEventsTrend = getPercentageTrend(upcomingEventsSamePeriodPr
 
 export const revenueCurrentMonth = payments.filter(payment =>{
     const paidDate = new Date(payment.paidDate);
-    return payment.status === "paid" && paidDate.getMonth() === currentMonth 
+    return payment.status === "paid" 
+    && paidDate.getMonth() === currentMonth 
     && paidDate.getFullYear() === currentYear;
     }).reduce((total, payment ) => total+ payment.amount, 0);
 
@@ -88,10 +89,12 @@ export const statusGridData = [
         value: upcomingEventsCurrentMonth.length,
         subtitle: "Remaining this month",
         icon: CalendarDays,
+        format: "number",
         trend: {
             value: upcomingEventsTrend.value,
             direction: upcomingEventsTrend.direction,
-            label: "vs last month"
+            label: "vs last month",
+            tone: "positive"
         },
 
 
@@ -102,9 +105,11 @@ export const statusGridData = [
         value: revenueCurrentMonth,
         subtitle: "vs last month",
         icon: CircleDollarSign,
+        format: "currency",
         trend: {
             value: revenueTrend.value,
             direction: revenueTrend.direction,
+            tone: "positive"
         },
     },
      {
@@ -113,6 +118,7 @@ export const statusGridData = [
         value: totalOutstandingPayments,
         subtitle: `${totalNumberOfOutstandingPayments.length} invoices`,
         icon: CreditCard,
+        format: "currency",
     },
      {
         id: "status-inventoryAlerts",
@@ -120,6 +126,7 @@ export const statusGridData = [
         value: inventoryAlerts.length,
         subtitle: "items low or out",
         icon: Package,
+        format: "number",
     },
 
 ]

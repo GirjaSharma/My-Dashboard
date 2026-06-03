@@ -87,12 +87,12 @@ export const inventoryItems=[
         id: "item-tableRunners",
         name: "Runners",
         category: "Furniture",
-        totalQuantity: 50,
-        availableQuantity: 50,
+        totalQuantity: 12,
+        availableQuantity: 12,
         unitRentalPrice: 3,
         replacementCost: 2,
         condition: "new",
         status: "available",
-        reorderPoint: 5
+        reorderPoint: 2
     },
 ]
