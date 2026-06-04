@@ -1,4 +1,4 @@
-import {statusGridData} from '../../services/dashboardCalc';
+import {statusGridData} from '../../utils/dashboardCalc';
 import { ArrowUp, ArrowDown} from 'lucide-react';
 
 export const StatusGrid=()=>{
