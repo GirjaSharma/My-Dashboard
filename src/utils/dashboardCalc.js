@@ -6,8 +6,8 @@ import {CalendarDays, CircleDollarSign, CreditCard, Package} from 'lucide-react'
     const todayDate = new Date();
         todayDate.setHours(0, 0, 0, 0);
     const currentDay = todayDate.getDate();
-    const currentMonth = todayDate.getMonth()
-    const currentYear = todayDate.getFullYear();
+    export const currentMonth = todayDate.getMonth()
+    export const currentYear = todayDate.getFullYear();
 
 
     const lastDayDate = new Date(currentYear, currentMonth +1, 0)
@@ -130,3 +130,33 @@ export const statusGridData = [
     },
 
 ]
+
+
+export const getBookingsLineChartData = (month, year, bookings)=>{
+    const getDaysInMonth = (month, year) => new Date(year, month+1, 0).getDate();
+    const getMonthName = new Date(year, month, 1).toLocaleString("en-US", {
+        month: "short"
+    })
+    return Array.from({length: getDaysInMonth}, (_, index) =>{
+        const day = index+1;
+
+        const bookingsCount = bookings.filter(booking =>{
+            const eventDate = new Date(booking.eventDate);
+
+            return (
+                eventDate.getFullYear() === year &&
+                eventDate.getMonth() === month &&
+                eventDate.getDate() === day && 
+                booking.status !== "cancelled"
+            )
+        }).length;
+
+        return{
+            day,
+            label: `${getMonthName} ${day}`,
+            bookings: bookingsCount
+        }
+    })
+}
+
+export const bookingsLineChartData = getBookingsLineChartData(currentMonth, currentYear, bookings)

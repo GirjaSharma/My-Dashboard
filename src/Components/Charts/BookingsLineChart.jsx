@@ -1,52 +1,15 @@
-import { RechartsDevtools } from '@recharts/devtools';
+// import {useState} from 'react';
+// import { RechartsDevtools } from '@recharts/devtools';
 import { Line, LineChart, CartesianGrid, Legend, XAxis, YAxis, Tooltip } from 'recharts';
+import {bookingsLineChartData} from '../../utils/dashboardCalc';
 
-// #region Sample data
-// const data = [
-//   {
-//     name: 'Page A',
-//     uv: 400,
-//     pv: 2400,
-//     amt: 2400,
-//   },
-//   {
-//     name: 'Page B',
-//     uv: 300,
-//     pv: 4567,
-//     amt: 2400,
-//   },
-//   {
-//     name: 'Page C',
-//     uv: 320,
-//     pv: 1398,
-//     amt: 2400,
-//   },
-//   {
-//     name: 'Page D',
-//     uv: 200,
-//     pv: 9800,
-//     amt: 2400,
-//   },
-//   {
-//     name: 'Page E',
-//     uv: 278,
-//     pv: 3908,
-//     amt: 2400,
-//   },
-//   {
-//     name: 'Page F',
-//     uv: 189,
-//     pv: 4800,
-//     amt: 2400,
-//   },
-// ];
-
-// #endregion
 export const BookingLineChart =() => {
+  
+    console.log(bookingsLineChartData);
   return (
-    <LineChart style={{ width: '100%', aspectRatio: 1.618, maxWidth: 600 }}
+    <LineChart style={{ width: '100%', aspectRatio: 1.618, maxWidth: 500, padding: "1rem" }}
     responsive
-    // data={data}
+    data={bookingsLineChartData}
     margin={{
         top:20, 
         right: 20,
@@ -60,7 +23,7 @@ export const BookingLineChart =() => {
       <YAxis  width="auto" label={{ value: 'UV', position: 'insideLeft', angle: -90 }} />
       <Legend align="right" />
       <Tooltip/>
-      <RechartsDevtools />
+      {/* <RechartsDevtools /> */}
     </LineChart>
   );
 }
