@@ -3,9 +3,9 @@ import {inventoryItems} from '../data/inventory.js';
 import {payments} from '../data/payments.js';
 import {CalendarDays, CircleDollarSign, CreditCard, Package} from 'lucide-react'
 
-    const todayDate = new Date();
-        todayDate.setHours(0, 0, 0, 0);
-    const currentDay = todayDate.getDate();
+     const todayDate = new Date();
+     todayDate.setHours(0, 0, 0, 0);
+     const currentDay = todayDate.getDate();
     export const currentMonth = todayDate.getMonth()
     export const currentYear = todayDate.getFullYear();
 
@@ -133,7 +133,7 @@ export const statusGridData = [
 
 
 export const getBookingsLineChartData = (month, year, bookings)=>{
-    const getDaysInMonth = (month, year) => new Date(year, month+1, 0).getDate();
+    const getDaysInMonth = new Date(year, month+1, 0).getDate();
     const getMonthName = new Date(year, month, 1).toLocaleString("en-US", {
         month: "short"
     })
@@ -159,4 +159,43 @@ export const getBookingsLineChartData = (month, year, bookings)=>{
     })
 }
 
-export const bookingsLineChartData = getBookingsLineChartData(currentMonth, currentYear, bookings)
+const parseDateOnly = (dateString) =>{
+        const [year, month, day] = dateString.split("-").map(Number);
+        return new Date(year, month -1, day);
+    }
+
+    const isSameDay =(dateA, dateB) => {
+        return (
+            dateA.getFullYear() === dateB.getFullYear() &&
+                            dateA.getMonth() === dateB.getMonth() &&
+                            dateA.getDate() === dateB.getDate()
+        );
+    }
+
+export const getTodaysDeliveriesAndPickup = bookings.filter((booking) => {
+
+    const itemsOutDate = parseDateOnly(booking.itemsOutDate);
+    const itemsBackDate = parseDateOnly(booking.itemsBackDate);
+    
+    const isItemOutToday = isSameDay(itemsOutDate, todayDate);
+
+                            
+    
+    const isItemsBackToday = isSameDay(itemsBackDate, todayDate);
+
+
+                            console.log({id: booking.id,
+                                itemsOutDate: booking.itemsOutDate,
+                                itemsBackDate: booking.itemsBackDate,
+                                outDay: itemsOutDate.getDate(),
+                                backDay: itemsBackDate.getDate(),
+                                todayDay: todayDate.getDate(),
+                                isItemOutToday,
+                                isItemsBackToday
+                            })
+
+            return isItemOutToday || isItemsBackToday
+});
+
+
+// export const bookingsLineChartData = getBookingsLineChartData(currentMonth, currentYear, bookings)

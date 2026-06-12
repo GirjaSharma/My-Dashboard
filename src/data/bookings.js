@@ -935,4 +935,275 @@ export const bookings = [
          bookingStatus: "confirmed"
 
     },
+    {
+        id: "booking-033",
+        customerName: "Midhat",
+        eventDate: "2026-06-13",
+        items: [
+            {
+                itemName: "Chairs",
+                quantity : 35,
+                unitPrice: 2,
+            },
+             {
+                itemName: "Tables",
+                quantity : 6,
+                unitPrice: 10,
+            }, 
+            {
+                itemName: "Tables Cloth",
+                quantity : 6,
+                unitPrice: 10,
+            }, 
+
+
+        ],
+        charges:{
+            deliveryFee: 50,
+            setupFee:0,
+            discount:30,
+            tax: 0
+        },
+        fulfillmentType: "business_pickup",
+        itemsOutDate: "2026-06-12",
+        itemsBackDate: "2026-06-14",
+        itemsOutAt: "6:00 PM",
+        itemsBackAt: "10:00 AM",
+         bookingStatus: "confirmed"
+
+    },
+    {
+        id: "booking-034",
+        customerName: "Areeba",
+        eventDate: "2026-06-27",
+        items: [
+            {
+                itemName: "Folding Chairs",
+                quantity : 35,
+                unitPrice: 1.5,
+            },
+             {
+                itemName: "Tables",
+                quantity : 5,
+                unitPrice: 10,
+            }, 
+
+
+        ],
+        charges:{
+            deliveryFee: 50,
+            setupFee:0,
+            discount:2.5,
+            tax: 0
+        },
+        fulfillmentType: "business_pickup",
+        itemsOutDate: "2026-06-27",
+        itemsBackDate: "2026-06-28",
+        itemsOutAt: "11:00 AM",
+        itemsBackAt: "11:00 AM",
+         bookingStatus: "confirmed"
+
+    },
+     {
+        id: "booking-035",
+        customerName: "Samira",
+        eventDate: "2026-06-14",
+        items: [
+            {
+                itemName: "Kids Chairs",
+                quantity : 24,
+                unitPrice: 3,
+            },
+             {
+                itemName: "kids Tables",
+                quantity : 3,
+                unitPrice: 10,
+            }, 
+
+
+        ],
+        charges:{
+            deliveryFee: 0,
+            setupFee:0,
+            discount:2,
+            tax: 0
+        },
+        fulfillmentType: "customer_pickup",
+        itemsOutDate: "2026-06-13",
+        itemsBackDate: "2026-06-15",
+        itemsOutAt: "7:00 PM",
+        itemsBackAt: "10:00 AM",
+         bookingStatus: "confirmed"
+
+    },
+    {
+        id: "booking-036",
+        customerName: "Chelsea",
+        eventDate: "2026-06-27",
+        items: [
+            {
+                itemName: "Kids Chairs",
+                quantity : 8,
+                unitPrice: 3,
+            },
+             {
+                itemName: "kids Tables",
+                quantity : 3,
+                unitPrice: 10,
+            }, 
+
+
+        ],
+        charges:{
+            deliveryFee: 0,
+            setupFee:0,
+            discount:0,
+            tax: 0
+        },
+        fulfillmentType: "customer_pickup",
+        itemsOutDate: "2026-06-27",
+        itemsBackDate: "2026-06-28",
+        itemsOutAt: "9:00 AM",
+        itemsBackAt: "10:00 AM",
+         bookingStatus: "confirmed"
+
+    },
+    {
+        id: "booking-037",
+        customerName: "Anne Julia",
+        eventDate: "2026-06-20",
+        items: [
+            {
+                itemName: "Chairs",
+                quantity : 14,
+                unitPrice: 2,
+            },
+             {
+                itemName: "Tables",
+                quantity : 3,
+                unitPrice: 10,
+            }, 
+
+
+        ],
+        charges:{
+            deliveryFee: 0,
+            setupFee:0,
+            discount:2,
+            tax: 0
+        },
+        fulfillmentType: "customer_pickup",
+        itemsOutDate: "2026-06-19",
+        itemsBackDate: "2026-06-22",
+        itemsOutAt: "7:00 PM",
+        itemsBackAt: "10:00 AM",
+         bookingStatus: "confirmed"
+
+    },
+    {
+        id: "booking-038",
+        customerName: "Shaveta",
+        eventDate: "2026-06-30",
+        items: [
+            {
+                itemName: "Chairs",
+                quantity : 40,
+                unitPrice: 2,
+            },
+             {
+                itemName: "Tables",
+                quantity : 6,
+                unitPrice: 10,
+            }, 
+             {
+                itemName: "Table Cloth",
+                quantity : 6,
+                unitPrice: 10,
+            }, 
+             {
+                itemName: "Table Runners",
+                quantity : 6,
+                unitPrice: 2,
+            }, 
+
+
+        ],
+        charges:{
+            deliveryFee: 80,
+            setupFee:0,
+            discount:14,
+            tax: 0
+        },
+        fulfillmentType: "business_pickup",
+        itemsOutDate: "2026-06-30",
+        itemsBackDate: "2026-06-31",
+        itemsOutAt: "5:00 PM",
+        itemsBackAt: "7:00 AM",
+         bookingStatus: "confirmed"
+
+    },
+    // {
+    //     id: "booking-035",
+    //     customerName: "Samira",
+    //     eventDate: "2026-06-27",
+    //     items: [
+    //         {
+    //             itemName: "Kids Chairs",
+    //             quantity : 24,
+    //             unitPrice: 3,
+    //         },
+    //          {
+    //             itemName: "kids Tables",
+    //             quantity : 3,
+    //             unitPrice: 10,
+    //         }, 
+
+
+    //     ],
+    //     charges:{
+    //         deliveryFee: 0,
+    //         setupFee:0,
+    //         discount:2,
+    //         tax: 0
+    //     },
+    //     fulfillmentType: "customer_pickup",
+    //     itemsOutDate: "2026-06-13",
+    //     itemsBackDate: "2026-06-15",
+    //     itemsOutAt: "7:00 PM",
+    //     itemsBackAt: "10:00 AM",
+    //      bookingStatus: "confirmed"
+
+    // },
+    // {
+    //     id: "booking-035",
+    //     customerName: "Samira",
+    //     eventDate: "2026-06-27",
+    //     items: [
+    //         {
+    //             itemName: "Kids Chairs",
+    //             quantity : 24,
+    //             unitPrice: 3,
+    //         },
+    //          {
+    //             itemName: "kids Tables",
+    //             quantity : 3,
+    //             unitPrice: 10,
+    //         }, 
+
+
+    //     ],
+    //     charges:{
+    //         deliveryFee: 0,
+    //         setupFee:0,
+    //         discount:2,
+    //         tax: 0
+    //     },
+    //     fulfillmentType: "customer_pickup",
+    //     itemsOutDate: "2026-06-13",
+    //     itemsBackDate: "2026-06-15",
+    //     itemsOutAt: "7:00 PM",
+    //     itemsBackAt: "10:00 AM",
+    //      bookingStatus: "confirmed"
+
+    // },
 ]

@@ -2,11 +2,11 @@ import {statusGridData} from '../../utils/dashboardCalc';
 import { ArrowUp, ArrowDown} from 'lucide-react';
 
 export const StatusGrid=()=>{
-    console.log(statusGridData)
+    
     return (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 p-4">
                 {statusGridData.map((grid) => (
-                     <div  key={grid.id} className="border border-primary rounded-md bg-card p-4">
+                     <div  key={grid.id} className="border border-border-subtle rounded-md bg-surface p-4">
                         <div className="flex items-start justify-between">
                             <div className="flex-1">
                                 <div className ="flex items-center justify-center bg-card-muted text-primary rounded-full border border-primary h-10 w-10">

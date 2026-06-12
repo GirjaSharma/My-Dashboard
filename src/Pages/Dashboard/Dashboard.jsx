@@ -18,7 +18,7 @@ export default function Dashboard( user){
             <div className="flex-1 flex flex-col overflow-hidden">
                 <Header user={user} sidebarCollapsed={sidebarCollapsed} onToggle={()=> setSidebarCollapsed(!sidebarCollapsed)} />
                 <main className="flex-1 overflow-y-auto bg-bg">
-                    <div className="p6 space-y-6">
+                    <div>
                         <Overview/>
                     </div>
                 </main>
