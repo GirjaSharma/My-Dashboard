@@ -1,7 +1,7 @@
 
 import {PartyPopper, Sparkles} from "lucide-react";
 import {Link} from 'react-router-dom'
-import {navItems} from '../config/navigation'
+import {navItems} from '../../config/navigation'
 const Sidebar=({sidebarCollapsed})=>{
     
     return(

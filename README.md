@@ -1,16 +1,26 @@
-# React + Vite
+# Countryside Party Rentals Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite dashboard for Countryside Party Rentals with Auth0 authentication, a landing page, and an authenticated dashboard view.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `npm run dev` starts the local Vite dev server.
+- `npm run build` creates a production build in `dist`.
+- `npm run lint` runs ESLint across the project.
+- `npm run preview` previews the production build locally.
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```text
+src/
+  Components/     Shared UI components.
+  Pages/          Page-level views.
+  config/         App-level configuration, such as Auth0 and navigation.
+  data/           Local dashboard data.
+  providers/      Third-party provider wrappers.
+  utils/          Shared calculation/helpers.
+```
 
-## Expanding the ESLint configuration
+## Notes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Auth0 setup is centralized in `src/config/auth0.js` and wrapped by `src/providers/AuthProvider.jsx` so `src/main.jsx` stays focused on rendering the app shell.
