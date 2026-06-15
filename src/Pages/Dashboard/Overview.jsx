@@ -1,6 +1,7 @@
 import {StatusGrid} from './StatusGrid';
 import {BookingsChartCard} from '../../Components/Charts/BookingsChartCard';
 import {getTodaysDeliveriesAndPickup} from '../../utils/dashboardCalc';
+import {Calendar} from '../../Components/Calendar/Calendar';
 
 export const Overview =()=>{
 
@@ -9,7 +10,7 @@ export const Overview =()=>{
 
             <StatusGrid/>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 items-stretch ml-4 mr-4">
-                <div className="lg:col-span-5 min-w-0 h-70">
+                <div className="lg:col-span-5 min-w-0 h-70 ">
                     <BookingsChartCard/>
                 </div>
                 <div className="lg:col-span-4 min-w-0 bg-surface border border-border-subtle rounded-md w-full h-70 p-4 shadow-sm">
@@ -41,7 +42,7 @@ export const Overview =()=>{
                     
                 </div>
                 <div className="lg:col-span-3 min-w-0 border border-border-subtle p-4 rounded-md bg-surface shadow-sm w-full h-70">
-                    <h3>Calender</h3>
+                    <Calendar/>
                 </div>
             </div>
         </div>

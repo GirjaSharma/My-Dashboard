@@ -95,4 +95,16 @@ export const inventoryItems=[
         status: "available",
         reorderPoint: 2
     },
+    {
+        id: "item-cocktailTable",
+        name: "Cocktail Tables",
+        category: "Furniture",
+        totalQuantity: 2,
+        availableQuantity: 2,
+        unitRentalPrice: 15,
+        replacementCost: 150,
+        condition: "new",
+        status: "available",
+        reorderPoint: 0
+    },
 ]

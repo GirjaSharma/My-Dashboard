@@ -23,7 +23,7 @@ export const BookingsChartCard =() => {
   const xAxisTicks = Array.from(new Set([1,6,11,16,21,26, chartData.length]))
 
   return (
-      <section className=" bg-surface border border-border-subtle rounded-md w-full h-70 p-4">
+      <section className=" bg-surface border border-border-subtle rounded-md w-full h-70 p-4 shadow-sm">
         <div className="mb-2 flex items-center justify-between gap-4">
       
             <h3 className=" text-sm font-semibold text-text-main">BOOKINGS THIS MONTH</h3>

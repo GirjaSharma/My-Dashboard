@@ -183,17 +183,6 @@ export const getTodaysDeliveriesAndPickup = bookings.filter((booking) => {
     
     const isItemsBackToday = isSameDay(itemsBackDate, todayDate);
 
-
-                            console.log({id: booking.id,
-                                itemsOutDate: booking.itemsOutDate,
-                                itemsBackDate: booking.itemsBackDate,
-                                outDay: itemsOutDate.getDate(),
-                                backDay: itemsBackDate.getDate(),
-                                todayDay: todayDate.getDate(),
-                                isItemOutToday,
-                                isItemsBackToday
-                            })
-
             return isItemOutToday || isItemsBackToday
 });
 
