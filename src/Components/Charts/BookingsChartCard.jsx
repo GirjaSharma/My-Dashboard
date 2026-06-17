@@ -8,15 +8,15 @@ import {bookings} from '../../data/bookings';
 
 export const BookingsChartCard =() => {
 
-  const defaultMonth = String(new Date().getMonth() +1).padStart(2,0);
-  const [selectedValue, setSelectedValue] = useState(defaultMonth);
+  const defaultMonth = String(new Date().getMonth() +1).padStart(2,'0');
+  const [selectedMonthValue, setSelectedMonthValue] = useState(defaultMonth);
 
   const handleChange =(e)=>
   {
-    setSelectedValue(e.target.value)
+    setSelectedMonthValue(e.target.value)
   }
 
-  const selectedMonth = Number(selectedValue) -1;
+  const selectedMonth = Number(selectedMonthValue) -1;
 
   const chartData = getBookingsLineChartData(selectedMonth, currentYear, bookings)
 
@@ -28,7 +28,7 @@ export const BookingsChartCard =() => {
       
             <h3 className=" text-sm font-semibold text-text-main">BOOKINGS THIS MONTH</h3>
             {/* <div className="text-sm pr-2"> */}
-              <select id="select-month" value={selectedValue} onChange={handleChange} className="text-sm bg-surface border border-border-subtle rounded-md px-1 text-text-main outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring">
+              <select id="select-month" value={selectedMonthValue} onChange={handleChange} className="text-sm bg-surface border border-border-subtle rounded-md px-1 text-text-main outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring">
                 <option value="01">Jan {currentYear}</option>
                 <option value="02">Feb {currentYear}</option>
                 <option value="03">Mar {currentYear}</option>

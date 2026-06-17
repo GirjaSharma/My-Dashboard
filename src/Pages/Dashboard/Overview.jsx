@@ -1,9 +1,12 @@
+import {useState} from 'react';
 import {StatusGrid} from './StatusGrid';
 import {BookingsChartCard} from '../../Components/Charts/BookingsChartCard';
-import {getTodaysDeliveriesAndPickup} from '../../utils/dashboardCalc';
+import {getDeliveriesAndPickupByDate} from '../../utils/dashboardCalc';
 import {Calendar} from '../../Components/Calendar/Calendar';
 
 export const Overview =()=>{
+const [selectedDay, setSelectedDay] = useState(new Date());
+const deliveriesAndPickup = getDeliveriesAndPickupByDate(selectedDay);
 
     return(
         <div className="space-y-2">
@@ -15,7 +18,13 @@ export const Overview =()=>{
                 </div>
                 <div className="lg:col-span-4 min-w-0 bg-surface border border-border-subtle rounded-md w-full h-70 p-4 shadow-sm">
                     
-                        <h3 className="text-sm text-text-main mb-2">Today's Deliveries & Pickups</h3>
+                        <h3 className="text-sm text-text-main mb-2">
+                            Deliveries & Pickups for {selectedDay.toLocaleDateString('en-US', {
+                                month: 'short',
+                                day: 'numeric',
+                                year: 'numeric',
+                            })}
+                        </h3>
                         <div className="overflow-x-auto rounded-md "> 
                             <table className=" w-full text-sm text-left border-collapse">
                                 <thead>
@@ -27,7 +36,7 @@ export const Overview =()=>{
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {getTodaysDeliveriesAndPickup.map(booking => (
+                                    {deliveriesAndPickup.map(booking => (
                                         <tr key={booking.id} className="text-[10px] border border-border-subtle">
                                             <td className="px-2 py-3">{booking.itemsOutAt}</td>
                                             <td className="px-2 py-3">{booking.customerName}</td>
@@ -35,6 +44,11 @@ export const Overview =()=>{
                                             <td className="px-2 py-3">{booking.bookingStatus}</td>
                                         </tr>
                                     ))}
+                                    {deliveriesAndPickup.length === 0 && (
+                                        <tr className="text-[10px] border border-border-subtle">
+                                            <td className="px-2 py-3 text-text-soft" colSpan="4">No deliveries or pickups for this date.</td>
+                                        </tr>
+                                    )}
                                 </tbody>
                             </table>
                         </div>
@@ -42,7 +56,7 @@ export const Overview =()=>{
                     
                 </div>
                 <div className="lg:col-span-3 min-w-0 border border-border-subtle p-4 rounded-md bg-surface shadow-sm w-full h-70">
-                    <Calendar/>
+                    <Calendar selectedDay={selectedDay} setSelectedDay={setSelectedDay}/>
                 </div>
             </div>
         </div>

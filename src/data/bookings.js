@@ -1136,7 +1136,7 @@ export const bookings = [
         },
         fulfillmentType: "business_pickup",
         itemsOutDate: "2026-06-30",
-        itemsBackDate: "2026-06-31",
+        itemsBackDate: "2026-07-01",
         itemsOutAt: "5:00 PM",
         itemsBackAt: "6:00 AM",
          bookingStatus: "confirmed"
@@ -1434,7 +1434,7 @@ export const bookings = [
         itemsBackDate: "2026-06-16",
         itemsOutAt: "5:00 PM",
         itemsBackAt: "7:00 PM",
-         bookingStatus: "confirmed"
+         bookingStatus: "cancelled"
 
     },
     {
@@ -1477,6 +1477,44 @@ export const bookings = [
         itemsBackDate: "2026-06-14",
         itemsOutAt: "10:30 AM",
         itemsBackAt: "10:30 AM",
+         bookingStatus: "confirmed"
+
+    },
+    {
+        id: "booking-049",
+        customerName: "Sanjeev",
+        eventDate: "2026-06-27",
+        items: [
+            {
+                itemName: "Folding Chairs",
+                quantity : 15,
+                unitPrice: 1.5,
+            },
+            {
+                itemName: "Cocktail Tables",
+                quantity : 3,
+                unitPrice: 15,
+            },
+            {
+                itemName: "Cocktail Covers",
+                quantity : 3,
+                unitPrice: 5,
+            },
+             
+
+
+        ],
+        charges:{
+            deliveryFee: 0,
+            setupFee:0,
+            discount:0,
+            tax: 0
+        },
+        fulfillmentType: "customer_pickup",
+        itemsOutDate: "2026-06-27",
+        itemsBackDate: "2026-06-28",
+        itemsOutAt: "11:30 AM",
+        itemsBackAt: "12:30 PM",
          bookingStatus: "confirmed"
 
     },

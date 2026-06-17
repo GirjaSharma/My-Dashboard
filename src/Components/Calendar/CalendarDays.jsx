@@ -1,9 +1,9 @@
-export const CalendarDays = ({selectedDay}) => {
+export const CalendarDays = ({selectedDay, setSelectedDay, visibleDay, setVisibleDay}) => {
   const calendarDays = [];
 
   const firstDayOfMonth = new Date(
-    selectedDay.getFullYear(),
-    selectedDay.getMonth(),
+    visibleDay.getFullYear(),
+    visibleDay.getMonth(),
     1
   );
 
@@ -18,7 +18,7 @@ export const CalendarDays = ({selectedDay}) => {
     date.setDate(firstVisibleDay.getDate() + index);
 
     calendarDays.push({
-      currentMonth: date.getMonth() === selectedDay.getMonth(),
+      currentMonth: date.getMonth() === visibleDay.getMonth(),
       date,
       month: date.getMonth(),
       number: date.getDate(),
@@ -27,14 +27,33 @@ export const CalendarDays = ({selectedDay}) => {
     });
   }
 
-console.log(calendarDays)
-
 return (
-    <div className="grid grid-cols-7 gap-4">
-        {calendarDays.map((day) => (
-            <p className={day.currentMonth === false ? `text-gray-400 text-[12px]` : "text-[12px]"}>
-                {day.number}</p>
-        ))}
-    </div>
+<div className="grid grid-cols-7 gap-4">
+    {calendarDays.map((day) => (
+      <button
+        key={day.date.toISOString()}
+        type="button"
+        onClick={() => {
+          setSelectedDay(day.date);
+          setVisibleDay(day.date);
+        }}
+        className={
+          day.currentMonth
+            ? 'text-[12px]'
+            : 'text-gray-400 text-[12px]'
+        }
+      >
+        <span
+          className={
+            day.selected
+              ? 'flex h-5 w-5 items-center justify-center rounded-full bg-primary-soft'
+              : ''
+          }
+        >
+          {day.number}
+        </span>
+      </button>
+    ))}
+  </div>
 )
 }

@@ -172,19 +172,21 @@ const parseDateOnly = (dateString) =>{
         );
     }
 
-export const getTodaysDeliveriesAndPickup = bookings.filter((booking) => {
+export const getDeliveriesAndPickupByDate = (selectedDate) => bookings.filter((booking) => {
 
     const itemsOutDate = parseDateOnly(booking.itemsOutDate);
     const itemsBackDate = parseDateOnly(booking.itemsBackDate);
     
-    const isItemOutToday = isSameDay(itemsOutDate, todayDate);
+    const isItemOutSelectedDate = isSameDay(itemsOutDate, selectedDate);
 
                             
     
-    const isItemsBackToday = isSameDay(itemsBackDate, todayDate);
+    const isItemsBackSelectedDate = isSameDay(itemsBackDate, selectedDate);
 
-            return isItemOutToday || isItemsBackToday
+            return isItemOutSelectedDate || isItemsBackSelectedDate
 });
+
+export const getTodaysDeliveriesAndPickup = getDeliveriesAndPickupByDate(todayDate);
 
 
 // export const bookingsLineChartData = getBookingsLineChartData(currentMonth, currentYear, bookings)
