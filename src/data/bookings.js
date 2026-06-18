@@ -337,7 +337,7 @@ export const bookings = [
             },
             {
                 itemName: "table",
-                quantity : 12,
+                quantity : 3,
                 unitPrice: 10,
             },
 
@@ -345,7 +345,7 @@ export const bookings = [
         charges:{
             deliveryFee: 0,
             setupFee:0,
-            discount:0,
+            discount:3,
             tax: 0
         },
         fulfillmentType: "customer_pickup",
@@ -363,7 +363,7 @@ export const bookings = [
         items: [
             {
                 itemName: "Chairs",
-                quantity : 15,
+                quantity : 33,
                 unitPrice: 2,
             },
 
@@ -377,8 +377,8 @@ export const bookings = [
         fulfillmentType: "customer_pickup",
         itemsOutDate: "2026-06-12",
         itemsBackDate: "2026-06-13",
-        itemsOutAt: "11:00 AM",
-        itemsBackAt: "11:00 AM",
+        itemsOutAt: "10:00 AM",
+        itemsBackAt: "10:00 AM",
          bookingStatus: "confirmed"
 
     },
@@ -446,7 +446,7 @@ export const bookings = [
         items: [
             {
                 itemName: "Chairs",
-                quantity : 16,
+                quantity : 14,
                 unitPrice: 2,
             }
 
@@ -474,6 +474,11 @@ export const bookings = [
                 itemName: "Chairs",
                 quantity : 10,
                 unitPrice: 2,
+            },
+             {
+                itemName: "Table",
+                quantity : 1,
+                unitPrice: 10,
             }
 
         ],
@@ -604,7 +609,7 @@ export const bookings = [
         },
         fulfillmentType: "customer_pickup",
         itemsOutDate: "2026-05-26",
-        itemsBackDate: "2026-07-19",
+        itemsBackDate: "2026-05-27",
         itemsOutAt: "10:00 AM",
         itemsBackAt: "10:00 AM",
          bookingStatus: "confirmed"
@@ -836,7 +841,7 @@ export const bookings = [
         charges:{
             deliveryFee: 0,
             setupFee:0,
-            discount:0,
+            discount:10,
             tax: 0
         },
         fulfillmentType: "customer_pickup",
@@ -901,7 +906,7 @@ export const bookings = [
         itemsBackDate: "2026-06-22",
         itemsOutAt: "6:00 PM",
         itemsBackAt: "6:00 PM",
-         bookingStatus: "confirmed"
+         bookingStatus: "cancelled"
 
     },
       {
@@ -1149,7 +1154,7 @@ export const bookings = [
         items: [
             {
                 itemName: "Chairs",
-                quantity : 25,
+                quantity : 30,
                 unitPrice: 2,
             },
              {
@@ -1319,7 +1324,7 @@ export const bookings = [
         itemsBackDate: "2026-07-06",
         itemsOutAt: "11:00 AM",
         itemsBackAt: "11:00 AM",
-         bookingStatus: "confirmed"
+         bookingStatus: "cancelled"
 
     },
     {
@@ -1515,6 +1520,176 @@ export const bookings = [
         itemsBackDate: "2026-06-28",
         itemsOutAt: "11:30 AM",
         itemsBackAt: "12:30 PM",
+         bookingStatus: "confirmed"
+
+    },
+     {
+        id: "booking-049",
+        customerName: "Sanjeev",
+        eventDate: "2026-06-27",
+        items: [
+            {
+                itemName: "Folding Chairs",
+                quantity : 15,
+                unitPrice: 1.5,
+            },
+            {
+                itemName: "Cocktail Tables",
+                quantity : 3,
+                unitPrice: 15,
+            },
+            {
+                itemName: "Cocktail Covers",
+                quantity : 3,
+                unitPrice: 5,
+            },
+             
+
+
+        ],
+        charges:{
+            deliveryFee: 0,
+            setupFee:0,
+            discount:0,
+            tax: 0
+        },
+        fulfillmentType: "customer_pickup",
+        itemsOutDate: "2026-06-27",
+        itemsBackDate: "2026-06-28",
+        itemsOutAt: "11:30 AM",
+        itemsBackAt: "12:30 PM",
+         bookingStatus: "confirmed"
+
+    },
+     {
+        id: "booking-049",
+        customerName: "Sanjeev",
+        eventDate: "2026-06-27",
+        items: [
+            {
+                itemName: "Folding Chairs",
+                quantity : 15,
+                unitPrice: 1.5,
+            },
+            {
+                itemName: "Cocktail Tables",
+                quantity : 3,
+                unitPrice: 15,
+            },
+            {
+                itemName: "Cocktail Covers",
+                quantity : 3,
+                unitPrice: 5,
+            },
+             
+
+
+        ],
+        charges:{
+            deliveryFee: 0,
+            setupFee:0,
+            discount:0,
+            tax: 0
+        },
+        fulfillmentType: "customer_pickup",
+        itemsOutDate: "2026-06-27",
+        itemsBackDate: "2026-06-28",
+        itemsOutAt: "11:30 AM",
+        itemsBackAt: "12:30 PM",
+         bookingStatus: "confirmed"
+
+    },
+     {
+        id: "booking-050",
+        customerName: "Tara",
+        eventDate: "2026-06-20",
+        items: [
+            {
+                itemName: "Folding Chairs",
+                quantity : 20,
+                unitPrice: 1.5,
+            }
+             
+
+
+        ],
+        charges:{
+            deliveryFee: 0,
+            setupFee:0,
+            discount:0,
+            tax: 0
+        },
+        fulfillmentType: "customer_pickup",
+        itemsOutDate: "2026-06-19",
+        itemsBackDate: "2026-06-22",
+        itemsOutAt: "7:30 PM",
+        itemsBackAt: "02:30 PM",
+         bookingStatus: "confirmed"
+
+    },
+    {
+        id: "booking-051",
+        customerName: "Sarah",
+        eventDate: "2026-06-27",
+        items: [
+            {
+                itemName: " Chairs",
+                quantity : 20,
+                unitPrice: 2,
+            }
+             
+
+
+        ],
+        charges:{
+            deliveryFee: 0,
+            setupFee:0,
+            discount:0,
+            tax: 0
+        },
+        fulfillmentType: "customer_pickup",
+        itemsOutDate: "2026-06-27",
+        itemsBackDate: "2026-06-28",
+        itemsOutAt: "09:00 AM",
+        itemsBackAt: "10:30 AM",
+         bookingStatus: "confirmed"
+
+    },
+    {
+        id: "booking-052",
+        customerName: "Charlene",
+        eventDate: "2026-06-20",
+        items: [
+            {
+                itemName: "Folding Chairs",
+                quantity : 15,
+                unitPrice: 1.5,
+            },
+            {
+                itemName: "Kids Chairs",
+                quantity : 16,
+                unitPrice: 3,
+            },
+            {
+                itemName: "Kids Table",
+                quantity : 4,
+                unitPrice: 10,
+            }
+             
+
+
+        ],
+        charges:{
+            deliveryFee: 0,
+            setupFee:0,
+            discount:0,
+            tax: 0
+        },
+        fulfillmentType: "customer_pickup",
+        itemsOutDate: "2026-06-19",
+        itemsBackDate: "2026-06-22",
+        itemsOutAt: "7:30 PM",
+        itemsBackAt: "2:30 PM",
          bookingStatus: "confirmed"
 
     },
