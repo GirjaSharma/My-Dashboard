@@ -26,7 +26,7 @@ const deliveriesAndPickup = getDeliveriesAndPickupByDate(selectedDay);
                             })}
                         </h3>
                         <div className="min-h-0 flex-1 overflow-auto rounded-md border border-border-subtle"> 
-                            <table className="w-full min-w-[360px] text-sm text-left border-separate border-spacing-0">
+                            <table className="w-full min-w-[320px] text-sm text-left border-separate border-spacing-0">
                                 <thead className="sticky top-0 z-10 bg-surface">
                                     <tr className="text-[12px] text-text-primary border-b border-border-subtle">
                                         <th className="px-2 py-3 font-semibold">Time</th>

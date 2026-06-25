@@ -22,13 +22,10 @@ export const StatusGrid=()=>{
                                         {grid.format === "currency" ? `$${grid.value}` : grid.value}
                                     </p>
                                     <p className="text-[10px]">{grid?.subtitle}</p>
-
-                                    
-                                    
                             </div>
                               {grid?.trend && 
                              <div className="mt-6 text-[10px]">
-                                <p>{grid?.trend?.direction === "up" ? <ArrowUp className="h-4 w-4"/> : <ArrowDown className="h-4 w-4"/>}
+                                <p className="flex">{grid?.trend?.direction === "up" ? <ArrowUp className="h-4 w-4"/> : <ArrowDown className="h-4 w-4"/>}
                                 <span>{grid?.trend?.value}%</span></p>
                             </div>
                             }
