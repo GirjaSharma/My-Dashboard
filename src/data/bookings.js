@@ -581,7 +581,7 @@ export const bookings = [
         itemsBackDate: "2026-07-19",
         itemsOutAt: "11:00 AM",
         itemsBackAt: "11:00 AM",
-         bookingStatus: "confirmed"
+         bookingStatus: "cancelled"
 
     },
      {
@@ -1523,82 +1523,8 @@ export const bookings = [
          bookingStatus: "confirmed"
 
     },
-     {
-        id: "booking-049",
-        customerName: "Sanjeev",
-        eventDate: "2026-06-27",
-        items: [
-            {
-                itemName: "Folding Chairs",
-                quantity : 15,
-                unitPrice: 1.5,
-            },
-            {
-                itemName: "Cocktail Tables",
-                quantity : 3,
-                unitPrice: 15,
-            },
-            {
-                itemName: "Cocktail Covers",
-                quantity : 3,
-                unitPrice: 5,
-            },
-             
-
-
-        ],
-        charges:{
-            deliveryFee: 0,
-            setupFee:0,
-            discount:0,
-            tax: 0
-        },
-        fulfillmentType: "customer_pickup",
-        itemsOutDate: "2026-06-27",
-        itemsBackDate: "2026-06-28",
-        itemsOutAt: "11:30 AM",
-        itemsBackAt: "12:30 PM",
-         bookingStatus: "confirmed"
-
-    },
-     {
-        id: "booking-049",
-        customerName: "Sanjeev",
-        eventDate: "2026-06-27",
-        items: [
-            {
-                itemName: "Folding Chairs",
-                quantity : 15,
-                unitPrice: 1.5,
-            },
-            {
-                itemName: "Cocktail Tables",
-                quantity : 3,
-                unitPrice: 15,
-            },
-            {
-                itemName: "Cocktail Covers",
-                quantity : 3,
-                unitPrice: 5,
-            },
-             
-
-
-        ],
-        charges:{
-            deliveryFee: 0,
-            setupFee:0,
-            discount:0,
-            tax: 0
-        },
-        fulfillmentType: "customer_pickup",
-        itemsOutDate: "2026-06-27",
-        itemsBackDate: "2026-06-28",
-        itemsOutAt: "11:30 AM",
-        itemsBackAt: "12:30 PM",
-         bookingStatus: "confirmed"
-
-    },
+ 
+    
      {
         id: "booking-050",
         customerName: "Tara",
@@ -1652,7 +1578,7 @@ export const bookings = [
         itemsBackDate: "2026-06-28",
         itemsOutAt: "09:00 AM",
         itemsBackAt: "10:30 AM",
-         bookingStatus: "confirmed"
+         bookingStatus: "cancelled"
 
     },
     {

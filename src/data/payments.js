@@ -65,9 +65,9 @@ export const payments = [
         type: "balance",
         amount: 76,
         dueDate: "2026-05-23",
-        paidDate: null,
-        method: null,
-        status: "pending"
+        paidDate: "2026-05-23",
+        method: 'paid',
+        status: "paid"
     },
     {
         id: "008",
@@ -85,9 +85,9 @@ export const payments = [
         type: "balance",
         amount: 16,
         dueDate: "2026-05-24",
-        paidDate: null,
-        method: null,
-        status: "pending"
+        paidDate: "2026-05-24",
+        method: 'e-transfer',
+        status: "paid"
     },
     {
         id: "010",
@@ -105,9 +105,9 @@ export const payments = [
         type: "balance",
         amount: 18,
         dueDate: "2026-05-27",
-        paidDate: null,
-        method: null,
-        status: "pending"
+        paidDate: "2026-05-27",
+        method: 'e-transfer',
+        status: "paid"
     },
     {
         id: "012",
@@ -124,10 +124,10 @@ export const payments = [
         bookingId: "booking-007",
         type: "balance",
         amount: 130,
-        dueDate: "2026-06-05",
-        paidDate: null,
-        method: null,
-        status: "pending"
+        dueDate: "2026-06-06",
+        paidDate: "2026-06-05",
+        method: 'cash',
+        status: "paid"
     },
     {
         id: "014",
@@ -145,9 +145,9 @@ export const payments = [
         type: "balance",
         amount: 70,
         dueDate: "2026-06-06",
-        paidDate: null,
-        method: null,
-        status: "pending"
+        paidDate: "2026-06-06",
+        method: 'cash',
+        status: "paid"
     },
     {
         id: "016",
@@ -295,9 +295,9 @@ export const payments = [
         type: "balance",
         amount: 300,
         dueDate: "2026-06-19",
-        paidDate: null,
-        method: null,
-        status: "pending"
+        paidDate: "2026-06-19",
+        method: 'e-transfer',
+        status: "paid"
     },
     {
         id: "031",
@@ -555,9 +555,9 @@ export const payments = [
         type: "balance",
         amount: 48,
         dueDate: "2026-06-19",
-        paidDate: null,
-        method: null,
-        status: "pending"
+        paidDate: "2026-06-19",
+        method: "e-transfer",
+        status: "paid"
     },
     {
         id: "058",
@@ -735,9 +735,9 @@ export const payments = [
         type: "balance",
         amount: 30,
         dueDate: "2026-06-19",
-        paidDate: null,
-        method: null,
-        status: "pending"
+        paidDate: "2026-06-19",
+        method: "cash",
+        status: "paid"
     },
      {
         id: "076",
@@ -765,8 +765,8 @@ export const payments = [
         type: "balance",
         amount: 80,
         dueDate: "2026-06-19",
-        paidDate: null,
-        method: null,
-        status: "pending"
+        paidDate: "2026-06-19",
+        method: 'e-transfer',
+        status: "paid"
     },
 ]

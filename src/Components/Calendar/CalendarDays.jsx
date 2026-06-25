@@ -1,9 +1,9 @@
-export const CalendarDays = ({selectedDay, setSelectedDay, visibleDay, setVisibleDay}) => {
+export const CalendarDays = ({selectedDay, setSelectedDay, visibleMonth, setVisibleMonth}) => {
   const calendarDays = [];
 
   const firstDayOfMonth = new Date(
-    visibleDay.getFullYear(),
-    visibleDay.getMonth(),
+    visibleMonth.getFullYear(),
+    visibleMonth.getMonth(),
     1
   );
 
@@ -18,7 +18,7 @@ export const CalendarDays = ({selectedDay, setSelectedDay, visibleDay, setVisibl
     date.setDate(firstVisibleDay.getDate() + index);
 
     calendarDays.push({
-      currentMonth: date.getMonth() === visibleDay.getMonth(),
+      currentMonth: date.getMonth() === visibleMonth.getMonth(),
       date,
       month: date.getMonth(),
       number: date.getDate(),
@@ -26,16 +26,20 @@ export const CalendarDays = ({selectedDay, setSelectedDay, visibleDay, setVisibl
       year: date.getFullYear(),
     });
   }
-
 return (
-<div className="grid grid-cols-7 gap-4">
-    {calendarDays.map((day) => (
-      <button
+<div className="grid grid-cols-7 gap-3">
+    {calendarDays.map((day) => {
+        const today = new Date();
+      const isToday = day.date.toDateString() === today.toDateString() &&
+      today.getMonth() === visibleMonth.getMonth() && 
+      today.getFullYear() === visibleMonth.getFullYear();
+        return(
+ <button
         key={day.date.toISOString()}
         type="button"
         onClick={() => {
           setSelectedDay(day.date);
-          setVisibleDay(day.date);
+          setVisibleMonth(new Date(day.date.getFullYear(), day.date.getMonth(), 1));
         }}
         className={
           day.currentMonth
@@ -43,17 +47,29 @@ return (
             : 'text-gray-400 text-[12px]'
         }
       >
-        <span
-          className={
-            day.selected
-              ? 'flex h-5 w-5 items-center justify-center rounded-full bg-primary-soft'
-              : ''
-          }
-        >
-          {day.number}
-        </span>
+    <span className="flex flex-col items-center justify-center">
+    <span
+      className={
+        day.selected
+          ? 'flex h-5 w-5 items-center justify-center rounded-full bg-primary-soft'
+          : 'flex h-5 w-5 items-center justify-center'
+      }
+    >
+      {day.number}
+    </span>
+
+    <span
+      className={
+        isToday && !day.selected
+          ? 'h-1 w-1 rounded-full bg-primary'
+          : 'h-1 w-1'
+      }
+    />
+  </span>
       </button>
-    ))}
+        )
+     
+})}
   </div>
 )
 }
