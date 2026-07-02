@@ -190,3 +190,20 @@ export const getTodaysDeliveriesAndPickup = getDeliveriesAndPickupByDate(todayDa
 
 
 // export const bookingsLineChartData = getBookingsLineChartData(currentMonth, currentYear, bookings)
+
+const recentBookings = [...bookings].filter((booking) => booking.status !== "cancelled")
+.sort((a, b) => {
+return new Date(b.createdAt) - new Date(a.createdAt)
+}).splice(0,5);
+
+export const recentBookingsWithPayment = recentBookings.map((booking) => {
+    const bookingPayments = payments.filter((payment) => payment.bookingId === booking.id);
+
+    const totalAmount = bookingPayments.reduce((sum, payment) => sum+ Number(payment.amount), 0);
+
+    return {
+        ...booking,
+        totalAmount
+    }
+
+} )

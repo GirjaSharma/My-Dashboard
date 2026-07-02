@@ -65,11 +65,11 @@ setIsPickerCardOpen(false)
     return (
         <div className="space-y-1.5">
             <div className="relative flex items-center justify-between text-sm w-full">
-                <button><ChevronLeft className="w-4 h-4" onClick={gotoPreviousMonth}/></button>
+                <button type="button" aria-label="Previous month" className="rounded-md text-primary hover:bg-card-muted"><ChevronLeft className="w-4 h-4" onClick={gotoPreviousMonth}/></button>
                 <div className="space-x-2">
                     <button onClick={()=> setIsPickerCardOpen(!isPickerCardOpen)}>{months[visibleMonthIndex]} {visibleMonth.getFullYear()}</button> 
                 </div>
-                <button><ChevronRight className="w-4 h-4" onClick={gotoNextMonth}/></button>
+                <button type="button" aria-label="Next month" className="rounded-md text-primary hover:bg-card-muted"><ChevronRight className="w-4 h-4" onClick={gotoNextMonth}/></button>
                 {/* to be continued..... */}
                 {isPickerCardOpen && 
                     <div ref={cardRef} className="absolute top-5 left-1/2 w-44 -translate-x-1/2 border border-border-subtle shadow-sm rounded-md z-10 bg-surface p-3">

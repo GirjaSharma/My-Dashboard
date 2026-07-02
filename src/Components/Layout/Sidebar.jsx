@@ -5,18 +5,18 @@ import {navItems} from '../../config/navigation'
 const Sidebar=({sidebarCollapsed})=>{
     
     return(
-            <aside className= {`${sidebarCollapsed ? "w-20" : "w-50"} transition-all duration-300 ease-in-out h-screen flex flex-col relative z-10 border-r border-border-subtle bg-surface`}
+            <aside className= {`${sidebarCollapsed ? "w-20" : "w-52"} transition-all duration-300 ease-in-out h-screen flex flex-col relative z-10 border-r border-border-subtle bg-surface`}
             >
                <header className="flex flex-col items-center px-6 p-4 ">
                     {/* <div className="flex items-center space-x-3"> */}
-                        <div className="mb-1  text-primary flex items-center justify-center ">
+                        <div className="mb-1 text-primary flex items-center justify-center">
                             <PartyPopper className="w-12 h-12" />
                         </div>
 
                         {/* <div> */}
                         {!sidebarCollapsed && 
                         <>
-                        <h3 className="font-serif text-text-main">PARTY RENTALS</h3>
+                        <h3 className="font-serif text-text-main text-lg leading-tight">PARTY RENTALS</h3>
                     <p className="text-xs text-text-soft">SaaS</p>
                     </>}
  
@@ -32,7 +32,7 @@ const Sidebar=({sidebarCollapsed})=>{
                         const isActive = item.active;
                         return (
                         <Link key={item.id} to={item.path} className={
-                            `flex items-center gap-3 px-3 py-4 text-sm font-medium rounded-md transition-all duration-200 focus-visible:outline-2 focus-visible:outline-focus-ring
+                            `flex items-center gap-3 px-3 py-3.5 text-sm font-medium rounded-md transition-all duration-200 focus-visible:outline-2 focus-visible:outline-focus-ring
                             ${isActive ? "border border-border-strong bg-link-active-bg text-link-active" : "text-text-muted hover:bg-link-hover-bg hover:text-link-hover"} `
                                  
                                  }>
@@ -48,7 +48,7 @@ const Sidebar=({sidebarCollapsed})=>{
 
                  {/* Theme Switch */}
                
-                <section className="p-3 border border-border-subtle rounded-xl m-4 mb-6">
+                <section className="p-3 border border-border-subtle rounded-md m-4 mb-6 bg-card">
                   <div className="flex items-center gap-3">
                         <Sparkles className="w-6 h-6 text-primary shrink-0" />
                          {!sidebarCollapsed &&  <div className= "min-w-0">

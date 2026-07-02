@@ -23,12 +23,12 @@ export const BookingsChartCard =() => {
   const xAxisTicks = Array.from(new Set([1,6,11,16,21,26, chartData.length]))
 
   return (
-      <section className=" bg-surface border border-border-subtle rounded-md w-full h-70 p-4 shadow-sm">
+      <section className="bg-surface border border-border-subtle rounded-md w-full h-64 p-4 shadow-sm">
         <div className="mb-2 flex items-center justify-between gap-4">
       
-            <h3 className=" text-sm font-semibold text-text-main">BOOKINGS THIS MONTH</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.06em] text-text-muted">Bookings this month</h3>
             {/* <div className="text-sm pr-2"> */}
-              <select id="select-month" value={selectedMonthValue} onChange={handleChange} className="text-sm bg-surface border border-border-subtle rounded-md px-1 text-text-main outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring">
+              <select id="select-month" value={selectedMonthValue} onChange={handleChange} className="text-sm bg-surface border border-border-subtle rounded-md px-1 text-text-main outline-none hover:border-border-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring">
                 <option value="01">Jan {currentYear}</option>
                 <option value="02">Feb {currentYear}</option>
                 <option value="03">Mar {currentYear}</option>
@@ -48,7 +48,7 @@ export const BookingsChartCard =() => {
             
         </div>
          <div className="w-full min-w-0">
-        <ResponsiveContainer width="100%" height={240}>
+        <ResponsiveContainer width="100%" height={220}>
             <LineChart
             //  style={{ width: '100%', aspectRatio: 1.618, maxWidth: 500, padding: "1rem" }}
     data={chartData}
@@ -56,7 +56,7 @@ export const BookingsChartCard =() => {
         top:12, 
         right: 24,
         bottom: 8,
-        left:-20
+        left: -20
     }}
     >
         <CartesianGrid stroke="var(--border-subtle)" strokeDasharray="5 5"/>

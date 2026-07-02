@@ -6,12 +6,11 @@ import {Overview} from './Overview';
 
 
 export default function Dashboard( user){
-    console.log("user", user)
     const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
     // const [currentPage, setCurrentPage] =useState('overview')
 
     return (
-        <div className="min-h-screen bg-bg text-text-main ml-2 mr-4">
+        <div className="min-h-screen bg-bg text-text-main">
             <div className="flex h-screen overflow-hidden">
             <Sidebar sidebarCollapsed={sidebarCollapsed} onToggle={()=> setSidebarCollapsed(!sidebarCollapsed)} 
                 />

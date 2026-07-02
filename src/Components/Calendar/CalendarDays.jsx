@@ -27,7 +27,7 @@ export const CalendarDays = ({selectedDay, setSelectedDay, visibleMonth, setVisi
     });
   }
 return (
-<div className="grid grid-cols-7 gap-3">
+	<div className="grid grid-cols-7 gap-2">
     {calendarDays.map((day) => {
         const today = new Date();
       const isToday = day.date.toDateString() === today.toDateString() &&
@@ -42,12 +42,12 @@ return (
           setVisibleMonth(new Date(day.date.getFullYear(), day.date.getMonth(), 1));
         }}
         className={
-          day.currentMonth
-            ? 'text-[12px]'
-            : 'text-gray-400 text-[12px]'
-        }
-      >
-    <span className="flex flex-col items-center justify-center">
+	          day.currentMonth
+	            ? 'text-[12px] text-text-main'
+	            : 'text-[12px] text-text-soft'
+	        }
+	      >
+	    <span className="flex flex-col items-center justify-center">
     <span
       className={
         day.selected
