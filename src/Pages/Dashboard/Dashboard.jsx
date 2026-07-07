@@ -1,25 +1,33 @@
 
 import {useState} from 'react';
+import {useLocation, Outlet, matchPath} from 'react-router-dom';
 import Sidebar from '../../Components/Layout/Sidebar';
 import Header from '../../Components/Layout/Header'; 
-import {Overview} from './Overview';
+import {navItems} from '../../config/navigation';
+// import {Overview} from './Overview';
 
 
 export default function Dashboard( user){
+    const location = useLocation();
     const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
     // const [currentPage, setCurrentPage] =useState('overview')
+
+    const activeTab = navItems.find((tab) => matchPath({path : tab.path, end: true}, location.pathname));
+
+
+    const pageTitle = activeTab ? activeTab.label : "Overview";
 
     return (
         <div className="min-h-screen bg-bg text-text-main">
             <div className="flex h-screen overflow-hidden">
-            <Sidebar sidebarCollapsed={sidebarCollapsed} onToggle={()=> setSidebarCollapsed(!sidebarCollapsed)} 
+            <Sidebar sidebarCollapsed={sidebarCollapsed} onToggle={()=> setSidebarCollapsed(!sidebarCollapsed)} activePath={activeTab?.path}
                 />
             <div className="flex-1 flex flex-col overflow-hidden">
-                <Header user={user} sidebarCollapsed={sidebarCollapsed} onToggle={()=> setSidebarCollapsed(!sidebarCollapsed)} />
+                <Header userProfile={user} sidebarCollapsed={sidebarCollapsed} onToggle={()=> setSidebarCollapsed(!sidebarCollapsed)} pageTitle={pageTitle}/>
                 <main className="flex-1 overflow-y-auto bg-bg">
-                    <div>
-                        <Overview/>
-                    </div>
+            
+                        <Outlet/>
+                 
                 </main>
             </div>
              

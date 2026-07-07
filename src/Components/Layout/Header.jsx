@@ -1,7 +1,16 @@
 
+import {useState} from 'react';
 import {Menu, Search, Plus, ChevronDown, Bell} from 'lucide-react';
 // import {LogoutButton} from '../AuthButtons/LogoutButton' ;
-function Header({onToggle, user}){
+function Header({onToggle, userProfile, pageTitle}){
+    const {user} = userProfile; 
+    const [isProfileTrayOpen, setIsProfileTrayOpen] = useState(false);
+
+    // const handleClick = () =>{
+    //     setIsProfile
+    // }
+
+
     return(
         <header className="flex items-center justify-between bg-surface px-4 py-3 border-b border-border-subtle">
             {/* left section */}
@@ -11,7 +20,7 @@ function Header({onToggle, user}){
                     <Menu className="w-5 h-5" />
                 </button>
                 <div className="hidden md:block">
-                    <h1 className="font-serif text-2xl leading-none text-text-main">Overview</h1>
+                    <h1 className="font-serif text-2xl leading-none text-text-main">{pageTitle}</h1>
                     <p className="font-sans text-xs text-text-soft">Daily business dashboard</p>
                 </div>
                
@@ -39,8 +48,9 @@ function Header({onToggle, user}){
             <Bell />
 
             {/* User Profile */}
-
-                <div className="p-1.5 border border-border-subtle rounded-md shadow-sm bg-surface">
+            {/* to do------------------------ */}
+            <div>
+                <div className="relative p-1.5 border border-border-subtle rounded-md shadow-sm bg-surface">
                     <div className="flex items-center space-x-3 rounded-xl ">
                         {/* {user.map((user) =>(
 
@@ -50,14 +60,24 @@ function Header({onToggle, user}){
 
                         <div className="flex-1 min-w-0 hidden md:block">
                             <p className="text-xs font-bold text-text-main">
-                                Girja Sharma
+                                {user?.nickname}
                             </p>
                             <p className="text-xs text-text-soft">Admin</p>
                         </div>
                       
-                        <ChevronDown className="w-4 h-4" />
+                        <ChevronDown className="w-4 h-4" onClick={() => setIsProfileTrayOpen(!isProfileTrayOpen)}/>
                     </div>
+                    
                 </div>
+                {isProfileTrayOpen && <div className="absolute p-1.5 border border-border-subtle rounded-md shadow-sm bg-surface z-10">
+                     <ul>
+            <li><a href="/profile">My Profile</a></li>
+            <li><a href="/settings">Settings</a></li>
+            <li>LogoutButton</li>
+          </ul>
+                    </div>
+                    }
+                    </div>
                    </div>
 
             {/* <LogoutButton/> */}

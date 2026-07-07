@@ -2,8 +2,13 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import {OrdersPage} from './Pages/Orders/OrdersPage';
+import {OrdersPage} from './Pages/Dashboard/OrdersPage';
 import {Overview} from './Pages/Dashboard/Overview';
+import {Calendar} from './Pages/Dashboard/Calendar';
+import {Inventory} from './Pages/Dashboard/Inventory';
+import {Customers} from './Pages/Dashboard/Customers';
+import {Venues} from './Pages/Dashboard/Venues';
+import {Delivery} from './Pages/Dashboard/Delivery';
 
 const ProtectedRoute=({children, isAuthenticated})=>{
 return isAuthenticated ? 
@@ -23,22 +28,18 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="app-container">
-        <div className="loading-text">Loading...</div>
-      </div>
+        <div>Loading...</div>
     );
   }
 
   if (error) {
     return (
-      <div className="app-container">
-        <div className="error">Something went wrong</div>
-      </div>
+        <div>Something went wrong</div>
     );
   }
 return(
   <Routes>
-    <Route path="/" element={<LandingPage />} />
+    <Route path="/" element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <LandingPage />} />
  <Route
   element={
     <ProtectedRoute isAuthenticated={isAuthenticated}>
@@ -48,6 +49,11 @@ return(
 >
   <Route path="/dashboard" element={<Overview />} />
   <Route path="/orders" element={<OrdersPage />} />
+  <Route path="/calendar" element={<Calendar />} />
+  <Route path="/inventory" element={<Inventory />} />
+  <Route path="/customers" element={<Customers />} />
+  <Route path="/venues" element={<Venues />} />
+  <Route path="/delivery" element={<Delivery />} />
 </Route>
 </Routes>
 )

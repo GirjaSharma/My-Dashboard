@@ -75,21 +75,15 @@ body,
 }
 
 .login-logo {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 20px;
-
-  display: grid;
-  place-items: center;
-
-  border: 1px solid var(--login-primary);
-  border-radius: 50%;
-
-  background: rgba(214, 188, 122, 0.12);
-  color: var(--login-primary-hover);
-
-  font-size: 32px;
-  font-weight: 700;
+  display: block;
+  width: min(100%, 260px);
+  height: 80px;
+  margin: 0 auto 24px;
+  object-fit: cover;
+  object-position: center;
+  /* border: 1px solid rgba(214, 188, 122, 0.28);
+  border-radius: 20px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28); */
 }
 
 .login-title {

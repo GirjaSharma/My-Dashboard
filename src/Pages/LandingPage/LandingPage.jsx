@@ -1,12 +1,18 @@
 import {LoginButton} from '../../Components/AuthButtons/LoginButton';
 import {SignupButton} from '../../Components/AuthButtons/SignupButton';
 import './LandingPage.css';
+import logo from '../../assets/countryside-logo.png';
+
 
 export default function LandingPage(){
     return(
         <div className="login-theme login-page">
             <section className="login-card">
-                <div className="login-logo">CPR</div>
+                <img
+  src={logo}
+  alt="Countryside Events & Party Rentals"
+  className="login-logo"
+/>
                 <h1 className="login-title">Countryside Party Rentals</h1>
                 <p className="login-subtitle">Come celebrate with us.</p>
                 <div className="login-actions">

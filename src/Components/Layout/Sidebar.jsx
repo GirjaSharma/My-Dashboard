@@ -2,7 +2,7 @@
 import {PartyPopper, Sparkles} from "lucide-react";
 import {Link} from 'react-router-dom'
 import {navItems} from '../../config/navigation'
-const Sidebar=({sidebarCollapsed})=>{
+const Sidebar=({sidebarCollapsed, activePath})=>{
     
     return(
             <aside className= {`${sidebarCollapsed ? "w-20" : "w-52"} transition-all duration-300 ease-in-out h-screen flex flex-col relative z-10 border-r border-border-subtle bg-surface`}
@@ -29,9 +29,10 @@ const Sidebar=({sidebarCollapsed})=>{
                 <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
                     {navItems.map(item =>{
                         const Icon = item.icon;
-                        const isActive = item.active;
+                        const isActive = item.path === activePath;
                         return (
                         <Link key={item.id} to={item.path} className={
+
                             `flex items-center gap-3 px-3 py-3.5 text-sm font-medium rounded-md transition-all duration-200 focus-visible:outline-2 focus-visible:outline-focus-ring
                             ${isActive ? "border border-border-strong bg-link-active-bg text-link-active" : "text-text-muted hover:bg-link-hover-bg hover:text-link-hover"} `
                                  
