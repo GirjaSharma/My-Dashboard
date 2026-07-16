@@ -19,10 +19,10 @@ export const navItems = [
     path: '/dashboard',
   },
   {
-    label: 'Orders',
-    id: 'orders',
+    label: 'Bookings',
+    id: 'bookings',
     icon: ClipboardList,
-    path: '/orders',
+    path: '/bookings',
   },
   {
     label: 'Calendar',

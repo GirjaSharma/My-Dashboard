@@ -8,7 +8,7 @@ export const LogoutButton=()=>{
     auth0Logout({ logoutParams: { returnTo: window.location.origin } })}
         className="button logout"
         >
-            Logout
+            Sign out
         </button>
     )
 }

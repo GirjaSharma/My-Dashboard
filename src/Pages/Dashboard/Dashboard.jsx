@@ -16,6 +16,7 @@ export default function Dashboard( user){
 
 
     const pageTitle = activeTab ? activeTab.label : "Overview";
+    console.log(user, 'user')
 
     return (
         <div className="min-h-screen bg-bg text-text-main">

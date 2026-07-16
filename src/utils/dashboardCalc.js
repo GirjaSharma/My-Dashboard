@@ -1,7 +1,7 @@
 import {bookings} from '../data/bookings.js';
 import {inventoryItems} from '../data/inventory.js';
 import {payments} from '../data/payments.js';
-import {CalendarDays, CircleDollarSign, CreditCard, Package} from 'lucide-react'
+import {CalendarDays, CircleDollarSign, CreditCard, Package} from 'lucide-react';
 
      const todayDate = new Date();
      todayDate.setHours(0, 0, 0, 0);
@@ -159,10 +159,12 @@ export const getBookingsLineChartData = (month, year, bookings)=>{
     })
 }
 
-const parseDateOnly = (dateString) =>{
-        const [year, month, day] = dateString.split("-").map(Number);
-        return new Date(year, month -1, day);
-    }
+export const parseDateOnly = (dateString) => {
+  if (!dateString) return null;
+
+  const [year, month, day] = dateString.split("-").map(Number);
+  return new Date(year, month - 1, day);
+};
 
     const isSameDay =(dateA, dateB) => {
         return (
@@ -191,19 +193,79 @@ export const getTodaysDeliveriesAndPickup = getDeliveriesAndPickupByDate(todayDa
 
 // export const bookingsLineChartData = getBookingsLineChartData(currentMonth, currentYear, bookings)
 
-const recentBookings = [...bookings].filter((booking) => booking.status !== "cancelled")
-.sort((a, b) => {
-return new Date(b.createdAt) - new Date(a.createdAt)
-}).splice(0,5);
+export const bookingsWithPayment = (bookings, payments) => {
+  return bookings.map((booking) => {
+    const bookingPayments = payments.filter(
+      (payment) => payment.bookingId === booking.id
+    );
 
-export const recentBookingsWithPayment = recentBookings.map((booking) => {
-    const bookingPayments = payments.filter((payment) => payment.bookingId === booking.id);
+    const depositPayment = bookingPayments.find(
+      (payment) => payment.type === "deposit"
+    );
 
-    const totalAmount = bookingPayments.reduce((sum, payment) => sum+ Number(payment.amount), 0);
+    const balancePayment = bookingPayments.find(
+      (payment) => payment.type === "balance"
+    );
+
+    const depositAmount = depositPayment ? Number(depositPayment.amount) : 0;
+    const balanceAmount = balancePayment ? Number(balancePayment.amount) : 0;
+
+    const totalAmount = depositAmount + balanceAmount;
+
+   const hasPaidDeposit = depositPayment?.status === "paid";
+const hasPaidBalance = balancePayment?.status === "paid";
+
+const hasAnyPayments = bookingPayments.length > 0;
+
+const allPaymentsPaid =
+  hasAnyPayments &&
+  bookingPayments.every((payment) => payment.status === "paid");
+
+const somePaymentsPaid = bookingPayments.some(
+  (payment) => payment.status === "paid"
+);
+
+let paymentLabel;
+
+if (booking.bookingStatus === "cancelled") {
+  paymentLabel = "Refunded";
+} else if (allPaymentsPaid) {
+  paymentLabel = "Paid in full";
+} else if (hasPaidDeposit && !hasPaidBalance) {
+  paymentLabel = "Deposit paid";
+} else if (somePaymentsPaid) {
+  paymentLabel = "Partially paid";
+} else {
+  paymentLabel = "Balance due";
+}
+
+   const paymentToneClasses = {
+   "Paid in full": "bg-success-soft text-success",
+  "Deposit paid": "bg-success-soft text-success",
+  "Partially paid": "bg-warning-soft text-warning",
+  "Balance due": "bg-warning-soft text-warning",
+  "Refunded": "bg-danger-soft text-danger",
+  "No payment": "bg-card-muted text-text-soft",
+};                                  
 
     return {
-        ...booking,
-        totalAmount
-    }
+      ...booking,
+      depositAmount,
+      balanceAmount,
+      totalAmount,
+      paymentLabel,
+      paymentTone: paymentToneClasses[paymentLabel],
+    };
+  });
+};
 
-} )
+
+export const recentBookingsWithPayment = bookingsWithPayment(bookings, payments).filter((booking) => booking.bookingStatus !== "cancelled").sort((a, b) => {
+  const dateA = parseDateOnly(a.createdAt);
+  const dateB = parseDateOnly(b.createdAt);
+
+  if (!dateA) return 1;
+  if (!dateB) return -1;
+
+  return dateB - dateA;
+}).slice(0, 5);

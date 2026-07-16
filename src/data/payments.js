@@ -1,7 +1,7 @@
 export const payments = [
     {
         id: "001",
-        bookingId: "#ORD-001",
+        bookingId: "#BK-001",
         type: "balance",
         amount: 50,
         dueDate: "2026-05-02",
@@ -11,7 +11,7 @@ export const payments = [
     },
     {
         id: "002",
-        bookingId: "#ORD-002",
+        bookingId: "#BK-002",
         type: "deposit",
         amount: 25,
         dueDate: "2026-04-26",
@@ -21,7 +21,7 @@ export const payments = [
     },
     {
         id: "003",
-        bookingId: "#ORD-002",
+        bookingId: "#BK-002",
         type: "balance",
         amount: 100,
         dueDate: "2026-05-16",
@@ -31,7 +31,7 @@ export const payments = [
     },
     {
         id: "004",
-        bookingId: "#ORD-003",
+        bookingId: "#BK-003",
         type: "deposit",
         amount: 15,
         dueDate: "2026-05-14",
@@ -41,7 +41,7 @@ export const payments = [
     },
     {
         id: "005",
-        bookingId: "#ORD-003",
+        bookingId: "#BK-003",
         type: "balance",
         amount: 31,
         dueDate: "2026-05-16",
@@ -51,7 +51,7 @@ export const payments = [
     },
     {
         id: "006",
-        bookingId: "#ORD-004",
+        bookingId: "#BK-004",
         type: "deposit",
         amount: 20,
         dueDate: "2026-05-16",
@@ -61,7 +61,7 @@ export const payments = [
     },
     {
         id: "007",
-        bookingId: "#ORD-004",
+        bookingId: "#BK-004",
         type: "balance",
         amount: 76,
         dueDate: "2026-05-23",
@@ -71,7 +71,7 @@ export const payments = [
     },
     {
         id: "008",
-        bookingId: "#ORD-005",
+        bookingId: "#BK-005",
         type: "deposit",
         amount: 20,
         dueDate: "2026-05-12",
@@ -81,7 +81,7 @@ export const payments = [
     },
     {
         id: "009",
-        bookingId: "#ORD-005",
+        bookingId: "#BK-005",
         type: "balance",
         amount: 16,
         dueDate: "2026-05-24",
@@ -91,7 +91,7 @@ export const payments = [
     },
     {
         id: "010",
-        bookingId: "#ORD-006",
+        bookingId: "#BK-006",
         type: "deposit",
         amount: 10,
         dueDate: "2026-05-14",
@@ -101,7 +101,7 @@ export const payments = [
     },
      {
         id: "011",
-        bookingId: "#ORD-006",
+        bookingId: "#BK-006",
         type: "balance",
         amount: 18,
         dueDate: "2026-05-27",
@@ -111,7 +111,7 @@ export const payments = [
     },
     {
         id: "012",
-        bookingId: "#ORD-007",
+        bookingId: "#BK-007",
         type: "deposit",
         amount: 50,
         dueDate: "2026-05-08",
@@ -121,7 +121,7 @@ export const payments = [
     },
     {
         id: "013",
-        bookingId: "#ORD-007",
+        bookingId: "#BK-007",
         type: "balance",
         amount: 130,
         dueDate: "2026-06-06",
@@ -131,7 +131,7 @@ export const payments = [
     },
     {
         id: "014",
-        bookingId: "#ORD-008",
+        bookingId: "#BK-008",
         type: "deposit",
         amount: 40,
         dueDate: "2026-05-10",
@@ -141,7 +141,7 @@ export const payments = [
     },
     {
         id: "015",
-        bookingId: "#ORD-008",
+        bookingId: "#BK-008",
         type: "balance",
         amount: 70,
         dueDate: "2026-06-06",
@@ -151,7 +151,7 @@ export const payments = [
     },
     {
         id: "016",
-        bookingId: "#ORD-009",
+        bookingId: "#BK-009",
         type: "deposit",
         amount: 20,
         dueDate: "2026-05-20",
@@ -161,7 +161,7 @@ export const payments = [
     },
      {
         id: "017",
-        bookingId: "#ORD-009",
+        bookingId: "#BK-009",
         type: "balance",
         amount: 60,
         dueDate: "2026-05-30",
@@ -171,7 +171,7 @@ export const payments = [
     },
     {
         id: "018",
-        bookingId: "#ORD-010",
+        bookingId: "#BK-010",
         type: "balance",
         amount: 30,
         dueDate: "2026-06-01",
@@ -181,7 +181,7 @@ export const payments = [
     },
      {
         id: "019",
-        bookingId: "#ORD-011",
+        bookingId: "#BK-011",
         type: "deposit",
         amount: 15,
         dueDate: "2026-06-07",
@@ -191,7 +191,7 @@ export const payments = [
     },
     {
         id: "020",
-        bookingId: "#ORD-011",
+        bookingId: "#BK-011",
         type: "balance",
         amount: 15,
         dueDate: "2026-06-07",
@@ -201,7 +201,7 @@ export const payments = [
     },
     {
         id: "021",
-        bookingId: "#ORD-012",
+        bookingId: "#BK-012",
         type: "deposit",
         amount: 20,
         dueDate: "2026-05-21",
@@ -211,7 +211,7 @@ export const payments = [
     },
     {
         id: "022",
-        bookingId: "#ORD-012",
+        bookingId: "#BK-012",
         type: "balance",
         amount: 65,
         dueDate: "2026-06-06",
@@ -221,7 +221,7 @@ export const payments = [
     },
      {
         id: "023",
-        bookingId: "#ORD-013",
+        bookingId: "#BK-013",
         type: "balance",
         amount: 66,
         dueDate: "2026-06-12",
@@ -231,7 +231,7 @@ export const payments = [
     },
     {
         id: "024",
-        bookingId: "#ORD-014",
+        bookingId: "#BK-014",
         type: "balance",
         amount: 65,
         dueDate: "2026-05-26",
@@ -241,7 +241,7 @@ export const payments = [
     },
      {
         id: "025",
-        bookingId: "#ORD-015",
+        bookingId: "#BK-015",
         type: "balance",
         amount: 20,
         dueDate: "2026-05-26",
@@ -251,7 +251,7 @@ export const payments = [
     },
     {
         id: "026",
-        bookingId: "#ORD-016",
+        bookingId: "#BK-016",
         type: "balance",
         amount: 28,
         dueDate: "2026-06-05",
@@ -261,7 +261,7 @@ export const payments = [
     },
     {
         id: "027",
-        bookingId: "#ORD-017",
+        bookingId: "#BK-017",
         type: "balance",
         amount: 30,
         dueDate: "2026-05-24",
@@ -271,7 +271,7 @@ export const payments = [
     },
     {
         id: "028",
-        bookingId: "#ORD-018",
+        bookingId: "#BK-018",
         type: "balance",
         amount: 40,
         dueDate: "2026-05-24",
@@ -281,7 +281,7 @@ export const payments = [
     },
     {
         id: "029",
-        bookingId: "#ORD-019",
+        bookingId: "#BK-019",
         type: "deposit",
         amount: 50,
         dueDate: "2026-05-24",
@@ -291,7 +291,7 @@ export const payments = [
     },
      {
         id: "030",
-        bookingId: "#ORD-019",
+        bookingId: "#BK-019",
         type: "balance",
         amount: 300,
         dueDate: "2026-06-19",
@@ -301,17 +301,17 @@ export const payments = [
     },
     {
         id: "031",
-        bookingId: "#ORD-020",
+        bookingId: "#BK-020",
         type: "deposit",
         amount: 10,
         dueDate: "2026-05-16",
         paidDate: "2026-05-16",
         method: 'e-transfer',
-        status: "paid"
+        status: "refunded"
     },
      {
         id: "032",
-        bookingId: "#ORD-020",
+        bookingId: "#BK-020",
         type: "balance",
         amount: 50,
         dueDate: "2026-07-18",
@@ -321,7 +321,7 @@ export const payments = [
     },
     {
         id: "033",
-        bookingId: "#ORD-021",
+        bookingId: "#BK-021",
         type: "balance",
         amount: 10,
         dueDate: "2026-05-26",
@@ -331,7 +331,7 @@ export const payments = [
     },
      {
         id: "034",
-        bookingId: "#ORD-022",
+        bookingId: "#BK-022",
         type: "deposit",
         amount: 20,
         dueDate: "2026-05-26",
@@ -341,7 +341,7 @@ export const payments = [
     },
     {
         id: "035",
-        bookingId: "#ORD-022",
+        bookingId: "#BK-022",
         type: "balance",
         amount: 50,
         dueDate: "2026-05-30",
@@ -351,7 +351,7 @@ export const payments = [
     },
      {
         id: "036",
-        bookingId: "#ORD-023",
+        bookingId: "#BK-023",
         type: "deposit",
         amount: 50,
         dueDate: "2026-05-27",
@@ -361,7 +361,7 @@ export const payments = [
     },
     {
         id: "037",
-        bookingId: "#ORD-023",
+        bookingId: "#BK-023",
         type: "balance",
         amount: 240,
         dueDate: "2026-06-27",
@@ -371,7 +371,7 @@ export const payments = [
     },
     {
         id: "038",
-        bookingId: "#ORD-024",
+        bookingId: "#BK-024",
         type: "balance",
         amount: 50,
         dueDate: "2026-07-03",
@@ -381,7 +381,7 @@ export const payments = [
     },
     {
         id: "039",
-        bookingId: "#ORD-025",
+        bookingId: "#BK-025",
         type: "balance",
         amount: 30,
         dueDate: "2026-05-30",
@@ -391,7 +391,7 @@ export const payments = [
     },
      {
         id: "040",
-        bookingId: "#ORD-026",
+        bookingId: "#BK-026",
         type: "balance",
         amount: 44,
         dueDate: "2026-05-30",
@@ -401,7 +401,7 @@ export const payments = [
     },
      {
         id: "041",
-        bookingId: "#ORD-027",
+        bookingId: "#BK-027",
         type: "balance",
         amount: 20,
         dueDate: "2026-05-30",
@@ -411,7 +411,7 @@ export const payments = [
     },
      {
         id: "042",
-        bookingId: "#ORD-028",
+        bookingId: "#BK-028",
         type: "balance",
         amount: 12,
         dueDate: "2026-05-29",
@@ -421,7 +421,7 @@ export const payments = [
     },
      {
         id: "043",
-        bookingId: "#ORD-029",
+        bookingId: "#BK-029",
         type: "balance",
         amount: 90,
         dueDate: "2026-05-30",
@@ -431,7 +431,7 @@ export const payments = [
     },
      {
         id: "044",
-        bookingId: "#ORD-030",
+        bookingId: "#BK-030",
         type: "deposit",
         amount: 10,
         dueDate: "2026-05-28",
@@ -441,7 +441,7 @@ export const payments = [
     },
     {
         id: "045",
-        bookingId: "#ORD-030",
+        bookingId: "#BK-030",
         type: "balance",
         amount: 32,
         dueDate: "2026-06-27",
@@ -451,7 +451,7 @@ export const payments = [
     },
     {
         id: "046",
-        bookingId: "#ORD-031",
+        bookingId: "#BK-031",
         type: "balance",
         amount: 34,
         dueDate: "2026-06-21",
@@ -461,7 +461,7 @@ export const payments = [
     },
       {
         id: "047",
-        bookingId: "#ORD-032",
+        bookingId: "#BK-032",
         type: "balance",
         amount: 46,
         dueDate: "2026-07-04",
@@ -471,7 +471,7 @@ export const payments = [
     },
     {
         id: "049",
-        bookingId: "#ORD-033",
+        bookingId: "#BK-033",
         type: "deposit",
         amount: 20,
         dueDate: "2026-05-31",
@@ -481,7 +481,7 @@ export const payments = [
     },
     {
         id: "050",
-        bookingId: "#ORD-033",
+        bookingId: "#BK-033",
         type: "balance",
         amount: 190,
         dueDate: "2026-06-12",
@@ -491,7 +491,7 @@ export const payments = [
     },
     {
         id: "051",
-        bookingId: "#ORD-034",
+        bookingId: "#BK-034",
         type: "deposit",
         amount: 50,
         dueDate: "2026-06-01",
@@ -501,7 +501,7 @@ export const payments = [
     },
      {
         id: "052",
-        bookingId: "#ORD-034",
+        bookingId: "#BK-034",
         type: "balance",
         amount: 100,
         dueDate: "2026-06-27",
@@ -511,7 +511,7 @@ export const payments = [
     },
      {
         id: "053",
-        bookingId: "#ORD-035",
+        bookingId: "#BK-035",
         type: "deposit",
         amount: 30,
         dueDate: "2026-06-03",
@@ -521,7 +521,7 @@ export const payments = [
     },
      {
         id: "054",
-        bookingId: "#ORD-035",
+        bookingId: "#BK-035",
         type: "balance",
         amount: 70,
         dueDate: "2026-06-13",
@@ -531,7 +531,7 @@ export const payments = [
     },
      {
         id: "055",
-        bookingId: "#ORD-036",
+        bookingId: "#BK-036",
         type: "balance",
         amount: 54,
         dueDate: "2026-06-27",
@@ -541,7 +541,7 @@ export const payments = [
     },
      {
         id: "056",
-        bookingId: "#ORD-037",
+        bookingId: "#BK-037",
         type: "deposit",
         amount: 10,
         dueDate: "2026-06-03",
@@ -551,7 +551,7 @@ export const payments = [
     },
      {
         id: "057",
-        bookingId: "#ORD-037",
+        bookingId: "#BK-037",
         type: "balance",
         amount: 48,
         dueDate: "2026-06-19",
@@ -561,7 +561,7 @@ export const payments = [
     },
     {
         id: "058",
-        bookingId: "#ORD-038",
+        bookingId: "#BK-038",
         type: "deposit",
         amount: 30,
         dueDate: "2026-06-03",
@@ -571,7 +571,7 @@ export const payments = [
     },
      {
         id: "059",
-        bookingId: "#ORD-038",
+        bookingId: "#BK-038",
         type: "balance",
         amount: 248,
         dueDate: "2026-06-30",
@@ -581,7 +581,7 @@ export const payments = [
     },
     {
         id: "060",
-        bookingId: "#ORD-039",
+        bookingId: "#BK-039",
         type: "deposit",
         amount: 20,
         dueDate: "2026-06-14",
@@ -591,7 +591,7 @@ export const payments = [
     },
      {
         id: "061",
-        bookingId: "#ORD-039",
+        bookingId: "#BK-039",
         type: "balance",
         amount: 60,
         dueDate: "2026-07-05",
@@ -601,7 +601,7 @@ export const payments = [
     },
      {
         id: "062",
-        bookingId: "#ORD-040",
+        bookingId: "#BK-040",
         type: "deposit",
         amount: 10,
         dueDate: "2026-06-05",
@@ -611,7 +611,7 @@ export const payments = [
     },
      {
         id: "063",
-        bookingId: "#ORD-040",
+        bookingId: "#BK-040",
         type: "balance",
         amount: 58,
         dueDate: "2026-07-05",
@@ -621,7 +621,7 @@ export const payments = [
     },
      {
         id: "064",
-        bookingId: "#ORD-041",
+        bookingId: "#BK-041",
         type: "deposit",
         amount: 20,
         dueDate: "2026-06-05",
@@ -631,7 +631,7 @@ export const payments = [
     },
     {
         id: "065",
-        bookingId: "#ORD-041",
+        bookingId: "#BK-041",
         type: "balance",
         amount: 68,
         dueDate: "2026-06-07",
@@ -641,7 +641,7 @@ export const payments = [
     },
      {
         id: "066",
-        bookingId: "#ORD-042",
+        bookingId: "#BK-042",
         type: "deposit",
         amount: 20,
         dueDate: "2026-06-05",
@@ -651,7 +651,7 @@ export const payments = [
     },
     {
         id: "067",
-        bookingId: "#ORD-042",
+        bookingId: "#BK-042",
         type: "balance",
         amount: 150,
         dueDate: "2026-07-11",
@@ -661,7 +661,7 @@ export const payments = [
     },
      {
         id: "068",
-        bookingId: "#ORD-044",
+        bookingId: "#BK-044",
         type: "balance",
         amount: 50,
         dueDate: "2026-06-13",
@@ -671,7 +671,7 @@ export const payments = [
     },
      {
         id: "069",
-        bookingId: "#ORD-045",
+        bookingId: "#BK-045",
         type: "balance",
         amount: 36,
         dueDate: "2026-07-14",
@@ -681,7 +681,7 @@ export const payments = [
     },
      {
         id: "070",
-        bookingId: "#ORD-046",
+        bookingId: "#BK-046",
         type: "deposit",
         amount: 20,
         dueDate: "2026-06-11",
@@ -691,7 +691,7 @@ export const payments = [
     },
     {
         id: "071",
-        bookingId: "#ORD-046",
+        bookingId: "#BK-046",
         type: "balance",
         amount: 40,
         dueDate: "2026-07-14",
@@ -701,7 +701,7 @@ export const payments = [
     },
     {
         id: "072",
-        bookingId: "#ORD-048",
+        bookingId: "#BK-048",
         type: "balance",
         amount: 42,
         dueDate: "2026-06-13",
@@ -711,7 +711,7 @@ export const payments = [
     },
     {
         id: "073",
-        bookingId: "#ORD-049",
+        bookingId: "#BK-049",
         type: "deposit",
         amount: 20,
         dueDate: "2026-06-16",
@@ -721,7 +721,7 @@ export const payments = [
     },
     {
         id: "074",
-        bookingId: "#ORD-049",
+        bookingId: "#BK-049",
         type: "balance",
         amount: 62,
         dueDate: "2026-06-27",
@@ -731,7 +731,7 @@ export const payments = [
     },
      {
         id: "075",
-        bookingId: "#ORD-050",
+        bookingId: "#BK-050",
         type: "balance",
         amount: 30,
         dueDate: "2026-06-19",
@@ -741,7 +741,7 @@ export const payments = [
     },
      {
         id: "076",
-        bookingId: "#ORD-051",
+        bookingId: "#BK-051",
         type: "balance",
         amount: 40,
         dueDate: "2026-06-27",
@@ -751,7 +751,7 @@ export const payments = [
     },
     {
         id: "077",
-        bookingId: "#ORD-052",
+        bookingId: "#BK-052",
         type: "deposit",
         amount: 20,
         dueDate: "2026-06-16",
@@ -761,7 +761,7 @@ export const payments = [
     },
     {
         id: "078",
-        bookingId: "#ORD-052",
+        bookingId: "#BK-052",
         type: "balance",
         amount: 80,
         dueDate: "2026-06-19",

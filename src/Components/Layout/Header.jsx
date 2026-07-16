@@ -1,7 +1,8 @@
 
 import {useState} from 'react';
+import {Link} from 'react-router-dom';
 import {Menu, Search, Plus, ChevronDown, Bell} from 'lucide-react';
-// import {LogoutButton} from '../AuthButtons/LogoutButton' ;
+import {LogoutButton} from '../AuthButtons/LogoutButton' ;
 function Header({onToggle, userProfile, pageTitle}){
     const {user} = userProfile; 
     const [isProfileTrayOpen, setIsProfileTrayOpen] = useState(false);
@@ -49,35 +50,56 @@ function Header({onToggle, userProfile, pageTitle}){
 
             {/* User Profile */}
             {/* to do------------------------ */}
-            <div>
-                <div className="relative p-1.5 border border-border-subtle rounded-md shadow-sm bg-surface">
-                    <div className="flex items-center space-x-3 rounded-xl ">
-                        {/* {user.map((user) =>(
+           <div className="relative">
+  <button
+    type="button"
+    onClick={() => setIsProfileTrayOpen(!isProfileTrayOpen)}
+    className="flex items-center gap-3 rounded-md border border-border-subtle bg-surface px-2 py-1.5 shadow-sm"
+  >
+    <img
+      src={user.picture}
+      alt="avatar"
+      className="h-6 w-6 rounded-full"
+    />
 
-                        ))} */}
-                        <img src={user.picture} alt="avatar"
-                        className="w-6 h-6 rounded-full"/>
+    <div className="hidden min-w-0 flex-1 md:block">
+      <p className="text-xs font-bold text-text-main">
+        {user?.nickname}
+      </p>
+      <p className="text-xs text-text-soft">Admin</p>
+    </div>
 
-                        <div className="flex-1 min-w-0 hidden md:block">
-                            <p className="text-xs font-bold text-text-main">
-                                {user?.nickname}
-                            </p>
-                            <p className="text-xs text-text-soft">Admin</p>
-                        </div>
-                      
-                        <ChevronDown className="w-4 h-4" onClick={() => setIsProfileTrayOpen(!isProfileTrayOpen)}/>
-                    </div>
-                    
-                </div>
-                {isProfileTrayOpen && <div className="absolute p-1.5 border border-border-subtle rounded-md shadow-sm bg-surface z-10">
-                     <ul>
-            <li><a href="/profile">My Profile</a></li>
-            <li><a href="/settings">Settings</a></li>
-            <li>LogoutButton</li>
-          </ul>
-                    </div>
-                    }
-                    </div>
+    <ChevronDown className="h-4 w-4 text-text-soft" />
+  </button>
+
+  {isProfileTrayOpen && (
+    <div className="absolute right-0 top-full z-50 mt-0.5 w-full min-w-44 rounded-md border border-border-subtle bg-surface p-1 shadow-sm">
+      <ul className="space-y-0.5">
+        <li>
+          <Link
+            to="/profile"
+            className="block rounded-md px-3 py-1 text-sm text-text-soft hover:bg-card-muted hover:text-text-main"
+          >
+            My Profile
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            to="/settings"
+            className="block rounded-md px-3 py-1 text-sm text-text-soft hover:bg-card-muted hover:text-text-main"
+          >
+            Settings
+          </Link>
+        </li>
+
+        <li className="rounded-md px-3 py-1 text-sm text-text-soft hover:bg-card-muted hover:text-text-main">
+          <LogoutButton />
+        </li>
+      </ul>
+    </div>
+  )}
+</div>
                    </div>
 
             {/* <LogoutButton/> */}

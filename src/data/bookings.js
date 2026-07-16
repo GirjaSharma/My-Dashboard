@@ -1,6 +1,6 @@
 export const bookings = [
     {
-        id: "#ORD-001",
+        id: "#BK-001",
         customerName: "Rajassen",
         eventDate: "2026-05-03",
         items: [
@@ -27,7 +27,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-002",
+        id: "#BK-002",
         customerName: "Nedaa",
         eventDate: "2026-05-17",
         items: [
@@ -64,7 +64,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-003",
+        id: "#BK-003",
         customerName: "Rasha",
         eventDate: "2026-05-16",
         items: [
@@ -96,7 +96,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-004",
+        id: "#BK-004",
         customerName: "Bonnie",
         eventDate: "2026-05-24",
         items: [
@@ -123,7 +123,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-005",
+        id: "#BK-005",
         customerName: "Burn Ben",
         eventDate: "2026-05-24",
         items: [
@@ -150,7 +150,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-006",
+        id: "#BK-006",
         customerName: "Zahrah",
         eventDate: "2026-05-27",
         items: [
@@ -177,7 +177,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-007",
+        id: "#BK-007",
         customerName: "Ruhi",
         eventDate: "2026-06-06",
         items: [
@@ -214,7 +214,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-008",
+        id: "#BK-008",
         customerName: "Mahd",
         eventDate: "2026-06-07",
         items: [
@@ -246,7 +246,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-009",
+        id: "#BK-009",
         customerName: "Fatima",
         eventDate: "2026-05-30",
         items: [
@@ -273,7 +273,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-010",
+        id: "#BK-010",
         customerName: "Areej",
         eventDate: "2026-06-01",
         items: [
@@ -300,7 +300,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-011",
+        id: "#BK-011",
         customerName: "Areej",
         eventDate: "2026-06-07",
         items: [
@@ -327,7 +327,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-012",
+        id: "#BK-012",
         customerName: "Brittany",
         eventDate: "2026-06-06",
         items: [
@@ -369,7 +369,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-013",
+        id: "#BK-013",
         customerName: "Brandon",
         eventDate: "2026-06-12",
         items: [
@@ -396,7 +396,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-014",
+        id: "#BK-014",
         customerName: "Jiveria",
         eventDate: "2026-05-27",
         items: [
@@ -428,7 +428,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-015",
+        id: "#BK-015",
         customerName: "Aneela",
         eventDate: "2026-05-27",
         items: [
@@ -454,7 +454,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-016",
+        id: "#BK-016",
         customerName: "Rochelle",
         eventDate: "2026-06-05",
         items: [
@@ -481,7 +481,7 @@ export const bookings = [
 
     },
       {
-        id: "#ORD-017",
+        id: "#BK-017",
         customerName: "Arslan",
         eventDate: "2026-05-24",
         items: [
@@ -513,7 +513,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-018",
+        id: "#BK-018",
         customerName: "Mike",
         eventDate: "2026-05-24",
         items: [
@@ -540,7 +540,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-019",
+        id: "#BK-019",
         customerName: "Zulal",
         eventDate: "2026-06-21",
         items: [
@@ -577,7 +577,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-020",
+        id: "#BK-020",
         customerName: "Natasha",
         eventDate: "2026-07-18",
         items: [
@@ -604,7 +604,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-021",
+        id: "#BK-021",
         customerName: "Esther",
         eventDate: "2026-05-26",
         items: [
@@ -636,7 +636,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-022",
+        id: "#BK-022",
         customerName: "Gina",
         eventDate: "2026-05-31",
         items: [
@@ -668,7 +668,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-023",
+        id: "#BK-023",
         customerName: "Lisa",
         eventDate: "2026-06-28",
         items: [
@@ -704,7 +704,7 @@ export const bookings = [
          bookingStatus: "confirmed"
 
     }, {
-        id: "#ORD-024",
+        id: "#BK-024",
         customerName: "Marjan",
         eventDate: "2026-07-04",
         items: [
@@ -727,11 +727,11 @@ export const bookings = [
         itemsBackDate: "2026-07-05",
         itemsOutAt: "7:00 pM",
         itemsBackAt: "11:00 AM",
-        bookingStatus: "not confirmed"
+        bookingStatus: "pending"
 
     },
     {
-        id: "#ORD-025",
+        id: "#BK-025",
         customerName: "Mahesh",
         eventDate: "2026-05-30",
         items: [
@@ -763,7 +763,7 @@ export const bookings = [
 
     },
       {
-        id: "#ORD-026",
+        id: "#BK-026",
         customerName: "Thenuga",
         eventDate: "2026-05-30",
         items: [
@@ -795,7 +795,7 @@ export const bookings = [
 
     },
       {
-        id: "#ORD-027",
+        id: "#BK-027",
         customerName: "Zahrah",
         eventDate: "2026-05-30",
         items: [
@@ -822,7 +822,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-028",
+        id: "#BK-028",
         customerName: "Satyam",
         eventDate: "2026-05-29",
         items: [
@@ -849,7 +849,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-029",
+        id: "#BK-029",
         customerName: "Sarah",
         eventDate: "2026-05-31",
         items: [
@@ -881,7 +881,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-030",
+        id: "#BK-030",
         customerName: "Mirha",
         eventDate: "2026-06-28",
         items: [
@@ -908,7 +908,7 @@ export const bookings = [
 
     },
       {
-        id: "#ORD-031",
+        id: "#BK-031",
         customerName: "Priscilla",
         eventDate: "2026-06-22",
         items: [
@@ -940,7 +940,7 @@ export const bookings = [
 
     },
       {
-        id: "#ORD-032",
+        id: "#BK-032",
         customerName: "Treyvon",
         eventDate: "2026-07-04",
         items: [
@@ -972,7 +972,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-033",
+        id: "#BK-033",
         customerName: "Midhat",
         eventDate: "2026-06-13",
         items: [
@@ -1010,7 +1010,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-034",
+        id: "#BK-034",
         customerName: "Areeba",
         eventDate: "2026-06-27",
         items: [
@@ -1043,7 +1043,7 @@ export const bookings = [
 
     },
      {
-        id: "#ORD-035",
+        id: "#BK-035",
         customerName: "Samira",
         eventDate: "2026-06-14",
         items: [
@@ -1076,7 +1076,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-036",
+        id: "#BK-036",
         customerName: "Chelsea",
         eventDate: "2026-06-27",
         items: [
@@ -1109,7 +1109,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-037",
+        id: "#BK-037",
         customerName: "Anne Julia",
         eventDate: "2026-06-20",
         items: [
@@ -1142,7 +1142,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-038",
+        id: "#BK-038",
         customerName: "Shaveta",
         eventDate: "2026-06-30",
         items: [
@@ -1185,7 +1185,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-039",
+        id: "#BK-039",
         customerName: "Mekala",
         eventDate: "2026-07-05",
         items: [
@@ -1218,7 +1218,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-040",
+        id: "#BK-040",
         customerName: "Jessica",
         eventDate: "2026-06-27",
         items: [
@@ -1251,7 +1251,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-041",
+        id: "#BK-041",
         customerName: "Samia Mirza",
         eventDate: "2026-06-07",
         items: [
@@ -1289,7 +1289,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-042",
+        id: "#BK-042",
         customerName: "Danuta",
         eventDate: "2026-07-11",
         items: [
@@ -1327,7 +1327,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-043",
+        id: "#BK-043",
         customerName: "Coretta",
         eventDate: "2026-07-05",
         items: [
@@ -1369,7 +1369,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-044",
+        id: "#BK-044",
         customerName: "Sarabjeet",
         eventDate: "2026-06-13",
         items: [
@@ -1396,7 +1396,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-045",
+        id: "#BK-045",
         customerName: "Susan",
         eventDate: "2026-07-14",
         items: [
@@ -1425,7 +1425,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-046",
+        id: "#BK-046",
         customerName: "Meli",
         eventDate: "2026-07-12",
         items: [
@@ -1459,7 +1459,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-047",
+        id: "#BK-047",
         customerName: "Sruthi",
         eventDate: "2026-06-15",
         items: [
@@ -1487,7 +1487,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-048",
+        id: "#BK-048",
         customerName: "Charlene",
         eventDate: "2026-06-13",
         items: [
@@ -1531,7 +1531,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-049",
+        id: "#BK-049",
         customerName: "Sanjeev",
         eventDate: "2026-06-27",
         items: [
@@ -1572,7 +1572,7 @@ export const bookings = [
  
     
      {
-        id: "#ORD-050",
+        id: "#BK-050",
         customerName: "Tara",
         eventDate: "2026-06-20",
         items: [
@@ -1601,7 +1601,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-051",
+        id: "#BK-051",
         customerName: "Sarah",
         eventDate: "2026-06-27",
         items: [
@@ -1629,7 +1629,7 @@ export const bookings = [
 
     },
     {
-        id: "#ORD-052",
+        id: "#BK-052",
         customerName: "Charlene",
         eventDate: "2026-06-20",
         items: [
