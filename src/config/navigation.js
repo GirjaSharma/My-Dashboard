@@ -1,6 +1,6 @@
 import {
   BarChart3,
-  Building2,
+  // Building2,
   CalendarDays,
   ClipboardList,
   CreditCard,
@@ -42,12 +42,12 @@ export const navItems = [
     icon: Users,
     path: '/customers',
   },
-  {
-    label: 'Venues',
-    id: 'venues',
-    icon: Building2,
-    path: '/venues',
-  },
+  // {
+  //   label: 'Venues',
+  //   id: 'venues',
+  //   icon: Building2,
+  //   path: '/venues',
+  // },
   {
     label: 'Delivery',
     id: 'delivery',
@@ -73,3 +73,4 @@ export const navItems = [
     path: '/settings',
   },
 ];
+

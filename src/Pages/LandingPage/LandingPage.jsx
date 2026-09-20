@@ -13,7 +13,7 @@ export default function LandingPage(){
   alt="Countryside Events & Party Rentals"
   className="login-logo"
 />
-                <h1 className="login-title">Countryside Party Rentals</h1>
+                <h1 className="login-title">Countryside Events & Party Rentals</h1>
                 <p className="login-subtitle">Come celebrate with us.</p>
                 <div className="login-actions">
                 <SignupButton/>
