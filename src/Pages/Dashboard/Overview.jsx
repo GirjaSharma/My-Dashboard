@@ -1,20 +1,48 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {StatusGrid} from './StatusGrid';
 import {BookingsChartCard} from '../../Components/Charts/BookingsChartCard';
 import {getDeliveriesAndPickupByDate, recentBookingsWithPayment} from '../../utils/dashboardCalc';
 import {Calendar} from '../../Components/Calendar/Calendar';
 import { ArrowRight } from 'lucide-react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import {getDashboardSummary} from '../../services/dashboardApi';
 
 export const Overview =()=>{
 
-const [selectedDay, setSelectedDay] = useState(new Date());
+     const [summary, setSummary]= useState(null);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState(null);
+      const [selectedDay, setSelectedDay] = useState(new Date());
 const deliveriesAndPickup = getDeliveriesAndPickupByDate(selectedDay);
+    
+      useEffect(() => {
+        const fetchSummary = async() =>{
+          try{
+            setLoading(true);
+            setError(null);
+            const data= await getDashboardSummary();
+            setSummary(data);
+          }
+          catch(error){
+        setError(error.message)
+       }finally{
+        setLoading(false)
+       }
+        }
+        fetchSummary()
+      }, [])
+    
+
+if(loading) return <p>Loading dashboard...</p>;
+
+if(error) return <p>{error}</p>
+
+if(!summary) return null;
 
     return(
         <div className="space-y-3">
 
-            <StatusGrid/>
+            <StatusGrid summary={summary}/>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 items-stretch mx-5">
                 <div className="lg:col-span-5 min-w-0 h-64 ">
                     <BookingsChartCard/>
@@ -95,14 +123,11 @@ const deliveriesAndPickup = getDeliveriesAndPickupByDate(selectedDay);
                                             </td>
                                         </tr>
                                     ))}
-                                   
                                 </tbody>
                             </table>
                             
                     </div>
                                 <Link className="flex w-full items-center justify-between text-primary text-sm font-medium hover:text-primary-hover" to="/bookings" > <span>View all bookings</span><ArrowRight className="w-4 h-4"/></Link>
-                                   
-                         
                 </div>
             </div>
         </div>

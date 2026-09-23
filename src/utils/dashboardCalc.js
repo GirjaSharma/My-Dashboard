@@ -1,7 +1,7 @@
 import {bookings} from '../data/bookings.js';
 import {inventoryItems} from '../data/inventory.js';
 import {payments} from '../data/payments.js';
-import {CalendarDays, CircleDollarSign, CreditCard, Package} from 'lucide-react';
+// import {CalendarDays, CircleDollarSign, CreditCard, Package} from 'lucide-react';
 
      const todayDate = new Date();
      todayDate.setHours(0, 0, 0, 0);
@@ -82,54 +82,54 @@ export const inventoryAlerts = inventoryItems.filter(item => {
 })
 
 
-export const statusGridData = [
-    {
-        id: "status-upcomingEvents",
-        title: "UPCOMING EVENTS",
-        value: upcomingEventsCurrentMonth.length,
-        subtitle: "Remaining this month",
-        icon: CalendarDays,
-        format: "number",
-        trend: {
-            value: upcomingEventsTrend.value,
-            direction: upcomingEventsTrend.direction,
-            label: "vs last month",
-            tone: "positive"
-        },
+// export const statusGridData = [
+//     {
+//         id: "status-upcomingEvents",
+//         title: "UPCOMING EVENTS",
+//         value: upcomingEventsCurrentMonth.length,
+//         subtitle: "Remaining this month",
+//         icon: CalendarDays,
+//         format: "number",
+//         trend: {
+//             value: upcomingEventsTrend.value,
+//             direction: upcomingEventsTrend.direction,
+//             label: "vs last month",
+//             tone: "positive"
+//         },
 
 
-    },
-      {
-        id: "status-revenue",
-        title: "REVENUE THIS MONTH",
-        value: revenueCurrentMonth,
-        subtitle: "vs last month",
-        icon: CircleDollarSign,
-        format: "currency",
-        trend: {
-            value: revenueTrend.value,
-            direction: revenueTrend.direction,
-            tone: "positive"
-        },
-    },
-     {
-        id: "status-outstandingPayments",
-        title: "OUTSTANDING PAYMENTS",
-        value: totalOutstandingPayments,
-        subtitle: `${totalNumberOfOutstandingPayments.length} invoices`,
-        icon: CreditCard,
-        format: "currency",
-    },
-     {
-        id: "status-inventoryAlerts",
-        title: "INVENTORY ALERTS",
-        value: inventoryAlerts.length,
-        subtitle: "items low or out",
-        icon: Package,
-        format: "number",
-    },
+//     },
+//       {
+//         id: "status-revenue",
+//         title: "REVENUE THIS MONTH",
+//         value: revenueCurrentMonth,
+//         subtitle: "vs last month",
+//         icon: CircleDollarSign,
+//         format: "currency",
+//         trend: {
+//             value: revenueTrend.value,
+//             direction: revenueTrend.direction,
+//             tone: "positive"
+//         },
+//     },
+//      {
+//         id: "status-outstandingPayments",
+//         title: "OUTSTANDING PAYMENTS",
+//         value: totalOutstandingPayments,
+//         subtitle: `${totalNumberOfOutstandingPayments.length} invoices`,
+//         icon: CreditCard,
+//         format: "currency",
+//     },
+//      {
+//         id: "status-inventoryAlerts",
+//         title: "INVENTORY ALERTS",
+//         value: inventoryAlerts.length,
+//         subtitle: "items low or out",
+//         icon: Package,
+//         format: "number",
+//     },
 
-]
+// ]
 
 
 export const getBookingsLineChartData = (month, year, bookings)=>{

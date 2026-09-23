@@ -1,8 +1,51 @@
-import {statusGridData} from '../../utils/dashboardCalc';
+// import {statusGridData} from '../../utils/dashboardCalc';
 import { ArrowUp, ArrowDown} from 'lucide-react';
+import {CalendarDays, CircleDollarSign, CreditCard, Package} from 'lucide-react';
 
-export const StatusGrid=()=>{
-    
+export const StatusGrid=({summary})=>{
+    console.log("summary", summary)
+    // console.log("statusGridData", statusGridData)
+
+const statusGridData = [
+    {
+        id: "status-upcomingEvents",
+        title: "UPCOMING EVENTS",
+        value: summary.upcomingEvents.value,
+        subtitle: "Remaining this month",
+        icon: CalendarDays,
+        format: "number",
+        trend: summary.upcomingEvents.value
+
+
+    },
+      {
+      id: "status-revenue",
+      title: "REVENUE THIS MONTH",
+      value: summary.revenueThisMonth.value,
+      subtitle: summary.revenueThisMonth.subtitle,
+      icon: CircleDollarSign,
+      format: "currency",
+      trend: summary.revenueThisMonth.trend,
+    },
+    {
+      id: "status-outstandingPayments",
+      title: "OUTSTANDING PAYMENTS",
+      value: summary.outstandingPayments.value,
+      subtitle: `${summary.outstandingPayments.invoiceCount} invoices`,
+      icon: CreditCard,
+      format: "currency",
+    },
+    {
+      id: "status-inventoryAlerts",
+      title: "INVENTORY ALERTS",
+      value: summary.inventoryAlerts.value,
+      subtitle: summary.inventoryAlerts.subtitle,
+      icon: Package,
+      format: "number",
+    },
+
+]
+
     return (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 p-5 pb-0">
                 {statusGridData.map((grid) => (
