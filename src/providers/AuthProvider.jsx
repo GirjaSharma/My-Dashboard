@@ -6,7 +6,7 @@ export function AuthProvider({ children }) {
     <Auth0Provider
       domain={auth0Config.domain}
       clientId={auth0Config.clientId}
-      authorizationParams={{ redirect_uri: window.location.origin }}
+      authorizationParams={{ redirect_uri: window.location.origin, audience: auth0Config.audience }}
     >
       {children}
     </Auth0Provider>
